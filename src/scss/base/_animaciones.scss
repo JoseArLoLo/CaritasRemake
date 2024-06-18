@@ -1,0 +1,11 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

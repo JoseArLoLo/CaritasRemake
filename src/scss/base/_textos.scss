@@ -1,0 +1,9 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.titulo-center-blanco {
+    @include m.titulo(v.$blanco, 2.4rem, 4rem, center);
+}
+.titulo-center-rojo {
+    @include m.titulo(v.$rojo, 2.4rem, 4rem, center);
+}
