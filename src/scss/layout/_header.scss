@@ -2,6 +2,8 @@
 @use "base/mixins" as m;
 
 header.header {
+    width: min(90%, 120rem);
+    margin: 0 auto;
     text-decoration: none;
 
     .header_nav {
@@ -13,6 +15,7 @@ header.header {
 
         * {
             margin-bottom: 1rem;
+
             &:last-child {
                 margin-bottom: 0;
             }
@@ -20,6 +23,7 @@ header.header {
 
         @include m.tablet {
             flex-direction: row;
+
             * {
                 margin-bottom: 0;
             }
@@ -27,8 +31,9 @@ header.header {
 
         .header_nav_logo {
             background-color: transparent;
-            max-height: 5rem;
-            max-width: 19rem;
+            img {
+                max-height: 4.2rem;
+            }
         }
 
         .header_nav_opciones {

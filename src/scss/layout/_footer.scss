@@ -2,5 +2,21 @@
 @use "base/mixins" as m;
 
 footer {
+    margin: 0 auto;
+    background-color: #383434;
 
+    .footer_item {
+        width: min(90%, 120rem);
+        display: flex;
+        color: v.$blanco;
+        &:first-of-type {
+            justify-items: center;
+        }
+        p {
+            color: v.$blanco;
+            margin: 0;
+            padding: 0;
+            font-size: 1.6rem;
+        }
+    }
 }
