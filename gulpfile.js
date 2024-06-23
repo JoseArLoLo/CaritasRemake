@@ -73,6 +73,13 @@ function javascript( done ) {
  
     done();
 }
+function svg(done) {
+    src('src/img/**/*.svg') // Ruta de los archivos SVG fuente
+      .pipe(imagemin()) // Opcional: puedes aplicar optimización de imágenes aquí si lo deseas
+      .pipe(dest('build/img')); // Directorio de destino
+  
+    done();
+  }
 
 function dev(done) {
     watch("src/scss/**/*.scss", css);
@@ -80,6 +87,7 @@ function dev(done) {
     watch("src/img/*.*", imagenes)
     watch("src/img/*.*", versionWebp)
     watch("src/img/*.*", versionAvif)
+    watch('src/img/**/*.svg', svg);
     done();
 }
 
@@ -88,7 +96,8 @@ exports.js = javascript;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel( imagenes, versionWebp, versionAvif, javascript, dev );
+exports.svg = svg;
+exports.dev = parallel( imagenes, versionWebp, versionAvif, svg, javascript, dev );
 
 
 

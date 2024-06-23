@@ -1,0 +1,43 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.que-hacemos {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 4rem 0;
+    h2 {
+        color: v.$rojo;
+        text-align: center;
+    }
+    .acciones {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2.5rem;
+        @include m.telefono {
+            gap: 3.5rem;
+        }
+        @include m.tablet {
+            gap: 4.5rem;
+        }
+        a {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            max-width: 15rem;
+            width: 100%;
+            img {
+                max-height: 5rem;
+                width: auto;
+            }
+            h3 {
+                color: v.$negroLuminoso;
+                text-align: center;
+            }
+        }
+    }
+}

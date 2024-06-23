@@ -1,9 +1,12 @@
-@use 'variables' as v;
+@use "variables" as v;
+@use "base/mixins" as m;
 html {
     font-size: 62.5%;
     box-sizing: border-box;
 }
-*, *:after, *:before {
+*,
+*:after,
+*:before {
     box-sizing: inherit;
 }
 body {
@@ -20,7 +23,9 @@ p {
 a {
     text-decoration: none;
 }
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     margin: 0;
 }
 h1 {
@@ -42,4 +47,16 @@ img {
 .contenedor {
     width: min(90%, 120rem);
     margin: 0 auto;
+}
+.bold {
+    font-weight: bold;
+}
+.jump {
+    display: none;
+    @include m.tablet {
+        display: unset;
+    }
+}
+.banner {
+    pointer-events: none;
 }

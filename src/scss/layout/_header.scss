@@ -2,24 +2,17 @@
 @use "base/mixins" as m;
 
 header.header {
-    width: min(90%, 120rem);
+    width: min(95%, 120rem);
     margin: 0 auto;
     text-decoration: none;
 
     .header_nav {
+        @include m.resetear-lista();
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         padding: 1rem;
-
-        * {
-            margin-bottom: 1rem;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
 
         @include m.tablet {
             flex-direction: row;
@@ -28,18 +21,42 @@ header.header {
                 margin-bottom: 0;
             }
         }
-
+        .mobile-menu {
+            @include m.tablet {
+                display: none;
+            }
+            img {
+                width: 2.5rem;
+            }
+        }
         .header_nav_logo {
+            margin-bottom: 1rem;
+            @include m.tablet {
+                margin-bottom: unset;
+            }   
+        }
+        .header_nav_logo,
+        .header_nav_donar {
             background-color: transparent;
             img {
-                max-height: 4.2rem;
+                max-height: 3rem;
+                width: auto;
             }
         }
 
         .header_nav_opciones {
             @include m.resetear-lista();
-
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+            transition: visibility .3s ease-in-out, opacity .5s linear, height .5s linear;
+            @include m.tablet {
+                visibility: visible;
+                opacity: 1;
+                height: auto;
+            }
             li {
+                position: relative;
                 display: block;
                 text-align: center;
                 margin-bottom: 1rem;
@@ -48,26 +65,40 @@ header.header {
                     display: inline-block;
                     margin-right: 1.5rem;
                     margin-bottom: 0;
+
+                    &:not(:last-child)::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        right: -1rem;
+                        width: 2.5px; /* Grosor de la línea */
+                        height: 80%; /* Altura de la línea */
+                        background-color: v.$rojoBrillante;
+                        border-radius: 2px; /* Bordes curvos */
+                        transform: translateY(-50%); /* Centrar verticalmente */
+                    }
                 }
 
                 a {
                     color: v.$negro;
                     font-weight: bold;
+                    font-size: 1.4rem;
+                    transition: all 0.3s ease-in;
+                    &:hover,
+                    .active {
+                        color: v.$rojo;
+                    }
                 }
 
                 &:last-of-type {
                     margin-right: 0;
                 }
             }
-        }
-
-        .header_nav_donar {
-            background-color: v.$rojoBrillante;
-            padding: 1rem 2rem;
-            border-radius: 5rem;
-            font-weight: bold;
-            color: v.$blanco;
+            &.mostrar {
+                visibility: visible;
+                opacity: 1;
+                height: auto;
+            }
         }
     }
-
 }
