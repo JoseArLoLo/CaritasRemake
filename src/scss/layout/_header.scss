@@ -33,7 +33,7 @@ header.header {
             margin-bottom: 1rem;
             @include m.tablet {
                 margin-bottom: unset;
-            }   
+            }
         }
         .header_nav_logo,
         .header_nav_donar {
@@ -49,7 +49,10 @@ header.header {
             visibility: hidden;
             opacity: 0;
             height: 0;
-            transition: visibility .3s ease-in-out, opacity .5s linear, height .5s linear;
+            transition:
+                visibility 0.3s ease-in-out,
+                opacity 0.5s linear,
+                height 0.5s linear;
             @include m.tablet {
                 visibility: visible;
                 opacity: 1;

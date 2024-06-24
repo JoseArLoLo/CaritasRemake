@@ -57,6 +57,55 @@ incluirTemplate("header");
             <img src="/build/img/logo caritas.svg" alt="logo de la institucion">
         </div>
     </section>
+    <section class="como-ayudar">
+        <h2>&#191;Cómo ayudar&#63;</h2>
+        <div class="contenedor">
+            <a href="#" class="como-ayudar_item">
+                <picture>
+                    <source srcset="/build/img/01_Dona-tu-tiempo.avif" type="image/avif">
+                    <source srcset="/build/img/01_Dona-tu-tiempo.webp" type="image/webp">
+                    <img loading="lazy" src="/build/img/01_Dona-tu-tiempo.png" alt="Dona tu tiempo">
+                </picture>
+                <h3>Dona tu tiempo</h3>
+            </a>
+            <a href="#" class="como-ayudar_item">
+                <picture>
+                    <source srcset="/build/img/02_Dona-Recursos-Económicos.avif" type="image/avif">
+                    <source srcset="/build/img/02_Dona-Recursos-Económicos.webp" type="image/webp">
+                    <img loading="lazy" src="/build/img/02_Dona-Recursos-Económicos.png" alt="Dona recursos económicos">
+                </picture>
+                <h3>Dona recursos<br>económicos</h3>
+            </a>
+            <a href="#" class="como-ayudar_item">
+                <picture>
+                    <source srcset="/build/img/03_Dona-en-Especie.avif" type="image/avif">
+                    <source srcset="/build/img/03_Dona-en-Especie.webp" type="image/webp">
+                    <img loading="lazy" src="/build/img/03_Dona-en-Especie.png" alt="Dona en especie">
+                </picture>
+                <h3>Dona en especie</h3>
+            </a>
+            <a href="#" class="como-ayudar_item">
+                <picture>
+                    <source srcset="/build/img/04_Apoya-como-empresa.avif" type="image/avif">
+                    <source srcset="/build/img/04_Apoya-como-empresa.webp" type="image/webp">
+                    <img loading="lazy" src="/build/img/04_Apoya-como-empresa.png" alt="Apoya como empresa">
+                </picture>
+                <h3>Apoya como<br>empresa</h3>
+            </a>
+            <a href="#" class="como-ayudar_item">
+                <picture>
+                    <source srcset="/build/img/05_Apoya-como-profesionista.avif" type="image/avif">
+                    <source srcset="/build/img/05_Apoya-como-profesionista.webp" type="image/webp">
+                    <img loading="lazy" src="/build/img/05_Apoya-como-profesionista.png" alt="Apoya como profesionista">
+                </picture>
+                <h3>Apoya como<br>profesionista</h3>
+            </a>
+        </div>
+    </section>
+    <section class="nuestro-pan">
+        <h2>Nuestro pan de cada dia</h2>
+        <h1>EN PROCESO DE CODIFICACION</h1>
+    </section>
 </main>
 <?php
 incluirTemplate("footer");

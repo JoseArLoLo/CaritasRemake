@@ -2,7 +2,7 @@
 @use "base/mixins" as m;
 
 .promocional {
-    background-color: #383434;
+    background-color: v.$negroLuminoso;
     margin: 0 auto;
     padding: 4rem 0;
     .contenedor {
@@ -17,6 +17,9 @@
         }
         div {
             flex: 0 0 calc(85% - 1rem);
+            @include m.small {
+                flex: 0 0 calc(77.5% - 1rem);
+            }
             @include m.telefono {
                 flex: 0 0 calc(70% - 1rem);
             }
@@ -26,9 +29,14 @@
             }
         }
         img {
-            max-height: 3.5rem;
+            pointer-events: none;
+            max-height: 1.5rem;
             width: auto;
             flex: 0 0 calc(7.5% - 1rem);
+            @include m.small {
+                flex: 0 0 calc(11.25% - 1rem);
+                max-height: 3.25rem;
+            }
             @include m.telefono {
                 flex: 0 0 calc(15% - 1rem);
                 max-height: 5rem;
