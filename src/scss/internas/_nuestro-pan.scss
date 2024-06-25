@@ -1,0 +1,90 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+.nuestro-pan {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 4rem 0;
+    h2 {
+        color: v.$rojo;
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+    .contenedor {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .carousel__button {
+            display: grid;
+            place-items: center;
+            width: 5rem;
+            height: 5rem;
+            background-color: v.$rojo;
+            color: v.$blanco;
+            border: none;
+            border-radius: 50%;
+            font-size: 5.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            & > * {
+                transform: translateY(-20%); /* Mueve el contenido hacia arriba un 20% */
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        .carousel__container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            .carousel__track {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+            .carousel__slide {
+                box-sizing: border-box;
+                padding: 10px;
+                position: relative;
+                min-width: 100%;
+                @include m.telefono {
+                    min-width: 50%;
+                }
+                @include m.tablet {
+                    min-width: 33.3%;
+                }
+                @include m.desktop {
+                    min-width: 25%;
+                }
+
+                img {
+                    border-bottom: 2px solid v.$gris;
+                    border-radius: 10px;
+                    object-fit: cover;
+                    height: 20rem;
+                    width: 21rem;
+                    @include m.tablet {
+                        height: 22rem;
+                        width: 23rem;
+                    }
+                    @include m.desktop {
+                        height: 24rem;
+                        width: 25rem;
+                    }
+                }
+                .carousel__caption {
+                    text-align: left;
+                    margin-top: 1rem;
+                    h3 {
+                        font-weight: bold;
+                        font-size: 2.5rem;
+                    }
+                    p {
+                        color: v.$negro;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

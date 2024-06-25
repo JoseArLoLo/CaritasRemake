@@ -103,8 +103,103 @@ incluirTemplate("header");
         </div>
     </section>
     <section class="nuestro-pan">
-        <h2>Nuestro pan de cada dia</h2>
-        <h1>EN PROCESO DE CODIFICACION</h1>
+        <h2>Nuestro pan de cada día</h2>
+        <div class="contenedor">
+            <button class="carousel__button carousel__button--left" onclick="moveLeft()"><span>&#8249;</span></button>
+            <div class="carousel__container">
+                <div class="carousel__track">
+                    <div class="carousel__slide">
+                        <picture>
+                            <source srcset="/build/img/navidad.avif" type="image/avif">
+                            <source srcset="/build/img/navidad.webp" type="image/webp">
+                            <img loading="lazy" src="/build/img/navidad.png" alt="Navidad 2024">
+                        </picture>
+                        <div class="carousel__caption">
+                            <h3>Navidad 2024</h3>
+                            <p>25 de diciembre</p>
+                        </div>
+                    </div>
+                    <div class="carousel__slide">
+                        <picture>
+                            <source srcset="/build/img/reyes.avif" type="image/avif">
+                            <source srcset="/build/img/reyes.webp" type="image/webp">
+                            <img loading="lazy" src="/build/img/reyes.png" alt="Día de Reyes 2024">
+                        </picture>
+                        <div class="carousel__caption">
+                            <h3>Día de Reyes 2024</h3>
+                            <p>06 de enero</p>
+                        </div>
+                    </div>
+                    <div class="carousel__slide">
+                        <picture>
+                            <source srcset="/build/img/misa.avif" type="image/avif">
+                            <source srcset="/build/img/misa.webp" type="image/webp">
+                            <img loading="lazy" src="/build/img/misa.png" alt="Misa 12 Diciembre">
+                        </picture>
+                        <div class="carousel__caption">
+                            <h3>Misa 12 Diciembre</h3>
+                            <p>12 de diciembre</p>
+                        </div>
+                    </div>
+                    <div class="carousel__slide">
+                        <picture>
+                            <source srcset="/build/img/posada.avif" type="image/avif">
+                            <source srcset="/build/img/posada.webp" type="image/webp">
+                            <img loading="lazy" src="/build/img/posada.png" alt="Posada Cáritas">
+                        </picture>
+                        <div class="carousel__caption">
+                            <h3>Posada Cáritas</h3>
+                            <p>15 de diciembre</p>
+                        </div>
+                    </div>
+                    <div class="carousel__slide">
+                        <picture>
+                            <source srcset="/build/img/testing.avif" type="image/avif">
+                            <source srcset="/build/img/testing.webp" type="image/webp">
+                            <img loading="lazy" src="/build/img/testing.png" alt="Navidad 2024">
+                        </picture>
+                        <div class="carousel__caption">
+                            <h3>Navidad 2024</h3>
+                            <p>25 de diciembre</p>
+                        </div>
+                    </div>
+                    <div class="carousel__slide">
+                        <picture>
+                            <source srcset="/build/img/reyes.avif" type="image/avif">
+                            <source srcset="/build/img/reyes.webp" type="image/webp">
+                            <img loading="lazy" src="/build/img/reyes.png" alt="Día de Reyes 2024">
+                        </picture>
+                        <div class="carousel__caption">
+                            <h3>Día de Reyes 2024</h3>
+                            <p>06 de enero</p>
+                        </div>
+                    </div>
+                    <div class="carousel__slide">
+                        <picture>
+                            <source srcset="/build/img/misa.avif" type="image/avif">
+                            <source srcset="/build/img/misa.webp" type="image/webp">
+                            <img loading="lazy" src="/build/img/misa.png" alt="Misa 12 Diciembre">
+                        </picture>
+                        <div class="carousel__caption">
+                            <h3>Misa 12 Diciembre</h3>
+                            <p>12 de diciembre</p>
+                        </div>
+                    </div>
+                    <div class="carousel__slide">
+                        <picture>
+                            <source srcset="/build/img/posada.avif" type="image/avif">
+                            <source srcset="/build/img/posada.webp" type="image/webp">
+                            <img loading="lazy" src="/build/img/posada.png" alt="Posada Cáritas">
+                        </picture>
+                        <div class="carousel__caption">
+                            <h3>Posada Cáritas</h3>
+                            <p>15 de diciembre</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel__button carousel__button--right" onclick="moveRight()"><span>&#8250;</span></button>
+        </div>
     </section>
 </main>
 <?php
