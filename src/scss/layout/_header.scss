@@ -87,8 +87,8 @@ header.header {
                     font-weight: bold;
                     font-size: 1.4rem;
                     transition: all 0.3s ease-in;
-                    &:hover,
-                    .active {
+                    &.active,
+                    &:hover {
                         color: v.$rojo;
                     }
                 }

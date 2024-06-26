@@ -3,7 +3,7 @@ require 'config/database.php';
 
 define('TEMPLATES_URL', __DIR__ . '/templates');
 
-function incluirTemplate(string $nombre)
+function incluirTemplate(string $nombre, string $pagina = "")
 {
     include TEMPLATES_URL . "/$nombre.php";
 }

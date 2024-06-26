@@ -1,0 +1,2 @@
+document.querySelectorAll(".menu-item").forEach((e=>{e.addEventListener("click",(function(){document.querySelectorAll(".menu-item").forEach((e=>e.classList.remove("active"))),this.classList.add("active"),document.querySelectorAll(".content").forEach((e=>e.classList.remove("active")));document.getElementById(this.dataset.content).classList.add("active")}))}));
+//# sourceMappingURL=que-hacemos.js.map

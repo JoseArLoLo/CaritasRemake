@@ -1,6 +1,6 @@
 <?php
 require 'includes/app.php';
-incluirTemplate("header");
+incluirTemplate("header", $pagina = "principal");
 ?>
 <main>
     <div class="banner">
@@ -203,5 +203,5 @@ incluirTemplate("header");
     </section>
 </main>
 <?php
-incluirTemplate("footer");
+incluirTemplate("footer", $pagina = "principal");
 ?>

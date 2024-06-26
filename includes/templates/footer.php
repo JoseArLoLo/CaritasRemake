@@ -73,7 +73,8 @@
 </footer>
 <script src="/build/js/header.js"></script>
 <script src="/build/js/modernizr.js"></script>
-<script src="/build/js/nuestro-pan.js"></script>
+<?php echo $pagina === "principal" ? '<script src="/build/js/nuestro-pan.js"></script>' : '';?>
+<?php echo $pagina === "que-hacemos" ? '<script src="/build/js/que-hacemos.js"></script>' : '';?>
 </body>
 
 </html>
