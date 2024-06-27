@@ -4,7 +4,7 @@
     background-color: v.$gris;
 }
 .que-hacemos-acciones {
-    width: min(90%, 95rem);
+    width: min(90%, 97rem);
     margin: 0 auto;
 
     .menu {
@@ -17,10 +17,16 @@
             flex: 0 0 25%;
             width: 100%;
             cursor: pointer;
-            padding: .5rem .5rem 3rem .5rem;
-            @include m.small { padding: 1rem 1rem 3rem 1rem; }
-            @include m.telefono { padding: 1rem 1.5rem 3rem 1.5rem; }
-            @include m.tablet { padding: 1rem 2rem 3rem 2rem; }
+            padding: 0.5rem 0.5rem 3rem 0.5rem;
+            @include m.small {
+                padding: 1rem 1rem 3rem 1rem;
+            }
+            @include m.telefono {
+                padding: 1rem 1.5rem 3rem 1.5rem;
+            }
+            @include m.tablet {
+                padding: 1rem 2rem 3rem 2rem;
+            }
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -30,7 +36,7 @@
             transition:
                 background-color 0.3s,
                 border 0.3s;
-            
+
             &:hover,
             &.active {
                 background-color: v.$blanco;
@@ -84,7 +90,7 @@
                     display: flex;
                     justify-content: space-between;
                     flex-direction: column;
-                    border-bottom: .1rem solid v.$gris;
+                    border-bottom: 0.1rem solid v.$gris;
                     @include m.tablet {
                         flex-direction: row;
                     }
@@ -109,13 +115,57 @@
                                 position: absolute;
                                 top: 50%;
                                 right: -2rem;
-                                width: .1rem; /* Grosor de la línea */
+                                width: 0.1rem; /* Grosor de la línea */
                                 height: 100%; /* Altura de la línea */
                                 background-color: v.$gris;
                                 border-radius: 2px; /* Bordes curvos */
                                 transform: translateY(-50%); /* Centrar verticalmente */
                             }
                         }
+                    }
+                }
+            }
+            &#caritas-parroquial {
+                .caritas-parroquial_item_1 {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    border-bottom: 0.1rem solid v.$gris;
+                    padding-bottom: 2rem;
+                    @include m.tablet {
+                        flex-direction: row;
+                    }
+                    .item {
+                        flex: 0 0 calc(50% - 2rem);
+                        position: relative;
+                        img {
+                            margin-top: 1rem;
+                        }
+                        @include m.tablet {
+                            &:not(:last-child)::after {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                right: -2rem;
+                                width: 0.1rem; /* Grosor de la línea */
+                                height: 100%; /* Altura de la línea */
+                                background-color: v.$gris;
+                                border-radius: 2px; /* Bordes curvos */
+                                transform: translateY(-50%); /* Centrar verticalmente */
+                            }
+                        }
+                    }
+                }
+                .caritas-parroquial_item_2 {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    margin-top: 2rem;
+                    @include m.tablet {
+                        flex-direction: row;
+                    }
+                    .item {
+                        flex: 0 0 calc(50% - 2rem);
                     }
                 }
             }

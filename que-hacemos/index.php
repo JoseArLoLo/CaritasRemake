@@ -107,7 +107,7 @@ incluirTemplate("header", $pagina = "que-hacemos");
                 </div>
                 <div class="item">
                     <h4>Objetivo del programa</h4>
-                    <p>Ofrecer una herramienta para el desarrollo del Plan de Pastoral Social en la Parroquias de lo Diócesis de Culiacán de San José. Mediante este modelo y apoyados con la formación y acompañamiento de Cáritas Diocesana buscamos desarrollar acciones organizadas y permanentes para atender a los más desprotegidos. </p>
+                    <p>Ofrecer una herramienta para el desarrollo del Plan de Pastoral Social en la Parroquias de la Diócesis de Culiacán de San José. Mediante este modelo y apoyados con la formación y acompañamiento de Cáritas Diocesana buscamos desarrollar acciones organizadas y permanentes para atender a los más desprotegidos. </p>
                     <picture>
                         <source srcset="/build/img/frijojes.avif" type="image/avif">
                         <source srcset="/build/img/frijojes.webp" type="image/webp">
@@ -115,7 +115,7 @@ incluirTemplate("header", $pagina = "que-hacemos");
                     </picture>
                 </div>
             </div>
-            <div class="parroquial_item_2">
+            <div class="caritas-parroquial_item_2">
                 <div class="item">
                     <h4>Módulo de atención Caritas Parroquial</h4>
                     <p>Cáritas Parroquial es un modelo integral que pretende convertir a las comunidades en un motor de caridad cristiana, buscamos que las Córitas parroquiales sean la respuesta a una necesidad inmediata en una determinado situación: los hambrientos han de ser saciados, los desnudos vestidos, los enfermos atendidos para que se recuperen, los ancianos acompañados para que no vivan en soledad, etc. Cada una de las comunidades con conciencia caritativa ha de hacer lo posible para poner a disposición los medios necesarios para atenuar las necesidades existentes en sus propias comunidades.
