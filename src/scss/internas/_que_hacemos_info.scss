@@ -4,6 +4,9 @@
     background-color: v.$gris;
 }
 .que-hacemos-acciones {
+    width: min(90%, 95rem);
+    margin: 0 auto;
+
     .menu {
         margin-top: 2rem;
         display: flex;
@@ -14,7 +17,10 @@
             flex: 0 0 25%;
             width: 100%;
             cursor: pointer;
-            padding: 1rem 2rem 3rem 2rem;
+            padding: .5rem .5rem 3rem .5rem;
+            @include m.small { padding: 1rem 1rem 3rem 1rem; }
+            @include m.telefono { padding: 1rem 1.5rem 3rem 1.5rem; }
+            @include m.tablet { padding: 1rem 2rem 3rem 2rem; }
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -24,18 +30,37 @@
             transition:
                 background-color 0.3s,
                 border 0.3s;
+            
             &:hover,
             &.active {
                 background-color: v.$blanco;
             }
             img {
-                max-height: 5rem;
+                max-height: 1.8rem;
                 width: auto;
+                @include m.small {
+                    max-height: 2rem;
+                }
+                @include m.telefono {
+                    max-height: 3rem;
+                }
+                @include m.tablet {
+                    max-height: 5rem;
+                }
             }
             h3 {
                 color: v.$negroLuminoso;
                 text-align: center;
-                font-size: 2.5rem;
+                font-size: 1.3rem;
+                @include m.small {
+                    font-size: 1.5rem;
+                }
+                @include m.telefono {
+                    font-size: 1.8rem;
+                }
+                @include m.tablet {
+                    font-size: 2.5rem;
+                }
             }
         }
     }
@@ -49,7 +74,7 @@
             max-height 0.5s ease-in-out;
         &.active {
             opacity: 1;
-            max-height: 120rem;
+            max-height: 400rem;
             border-radius: 1rem;
             margin-bottom: 2rem;
             margin-top: -3rem;
@@ -58,9 +83,39 @@
                 .salud_item_1 {
                     display: flex;
                     justify-content: space-between;
-                    flex-direction: row;
+                    flex-direction: column;
+                    border-bottom: .1rem solid v.$gris;
+                    @include m.tablet {
+                        flex-direction: row;
+                    }
                     .item {
                         flex: 0 0 calc(50% - 2rem);
+                    }
+                }
+                .salud_item_2 {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    @include m.tablet {
+                        flex-direction: row;
+                    }
+                    .item {
+                        margin-top: 2rem;
+                        position: relative;
+                        flex: 0 0 calc(50% - 2rem);
+                        @include m.tablet {
+                            &:not(:last-child)::after {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                right: -2rem;
+                                width: .1rem; /* Grosor de la línea */
+                                height: 100%; /* Altura de la línea */
+                                background-color: v.$gris;
+                                border-radius: 2px; /* Bordes curvos */
+                                transform: translateY(-50%); /* Centrar verticalmente */
+                            }
+                        }
                     }
                 }
             }
@@ -80,20 +135,24 @@
                 .item_container {
                     display: flex;
                     flex-direction: column;
+                    padding: 1.5rem;
+                    gap: 1rem;
                     div {
                         display: flex;
                         flex-direction: row;
                         align-items: center;
                         justify-content: space-between;
                         img {
-                            max-height: 2rem;
+                            max-height: 4rem;
                             width: auto;
+                            margin: 0 auto;
+                            object-fit: cover;
                         }
                         p {
-                            flex: 0 0 calc(90% - .25rem);
+                            flex: 0 0 calc(90% - 0.2rem);
                         }
                         picture {
-                            flex: 0 0 calc(10% - .25rem);
+                            flex: 0 0 calc(10% - 0.2rem);
                         }
                     }
                 }
