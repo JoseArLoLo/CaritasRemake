@@ -19,7 +19,7 @@
             cursor: pointer;
             padding: 0.5rem 0.5rem 3rem 0.5rem;
             @include m.small {
-                padding: 1rem 1rem 3rem 1rem;
+                padding: 0.7rem 0.7rem 3rem 0.7rem;
             }
             @include m.telefono {
                 padding: 1rem 1.5rem 3rem 1.5rem;
@@ -48,7 +48,7 @@
                     max-height: 2rem;
                 }
                 @include m.telefono {
-                    max-height: 3rem;
+                    max-height: 2.5rem;
                 }
                 @include m.tablet {
                     max-height: 5rem;
@@ -59,10 +59,10 @@
                 text-align: center;
                 font-size: 1.3rem;
                 @include m.small {
-                    font-size: 1.5rem;
+                    font-size: 1.4rem;
                 }
                 @include m.telefono {
-                    font-size: 1.8rem;
+                    font-size: 1.65rem;
                 }
                 @include m.tablet {
                     font-size: 2.5rem;
@@ -91,6 +91,7 @@
                     justify-content: space-between;
                     flex-direction: column;
                     border-bottom: 0.1rem solid v.$gris;
+                    padding-bottom: 1rem;
                     @include m.tablet {
                         flex-direction: row;
                     }
@@ -169,6 +170,142 @@
                     }
                 }
             }
+            &#alimentos {
+                .alimentos_item_1 {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    border-bottom: 0.1rem solid v.$gris;
+                    padding-bottom: 2rem;
+                    @include m.tablet {
+                        flex-direction: row;
+                    }
+                    .item {
+                        flex: 0 0 calc(50% - 2rem);
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                            width: auto;
+                            height: auto;
+                            display: block;
+                        }
+                    }
+                }
+                .alimentos_item_2,
+                .alimentos_item_4 {
+                    margin-top: 2rem;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+
+                    @include m.tablet {
+                        flex-direction: row;
+                    }
+                    .item {
+                        flex: 0 0 calc(50% - 2rem);
+                        ul {
+                            margin: 0;
+                            padding: 0 0 0 2rem;
+                            color: v.$rojo;
+                            span {
+                                color: v.$negro;
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+                }
+                .alimentos_item_3 {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    border-bottom: 0.1rem solid v.$gris;
+                    padding-bottom: 2rem;
+                    .item {
+                        padding: 2rem;
+                        @include m.telefono {
+                            padding: 2rem 8rem;
+                        }
+                        @include m.tablet {
+                            padding: 2rem 10rem;
+                        }
+                        &:last-of-type {
+                            display: flex;
+                            justify-content: space-between;
+                            flex-direction: row;
+                            padding: unset;
+                            p {
+                                flex: 0 0 30%;
+                                text-align: center;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+            &#casos-especiales {
+                .casos-especiales_item_1 {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    border-bottom: 0.1rem solid v.$gris;
+                    padding-bottom: 1rem;
+                    @include m.tablet {
+                        flex-direction: row;
+                    }
+                    .item {
+                        position: relative;
+                        flex: 0 0 calc(50% - 2rem);
+                        @include m.tablet {
+                            &:not(:last-child)::after {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                right: -2rem;
+                                width: 0.1rem; /* Grosor de la línea */
+                                height: 100%; /* Altura de la línea */
+                                background-color: v.$gris;
+                                border-radius: 2px; /* Bordes curvos */
+                                transform: translateY(-50%); /* Centrar verticalmente */
+                            }
+                        }
+                    }
+                }
+                .casos-especiales_item_2 {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    @include m.tablet {
+                        flex-direction: row;
+                    }
+                    .item {
+                        margin-top: 2rem;
+                        position: relative;
+                        flex: 0 0 calc(50% - 2rem);
+                        @include m.tablet {
+                            &:not(:last-child)::after {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                right: -2rem;
+                                width: 0.1rem; /* Grosor de la línea */
+                                height: 100%; /* Altura de la línea */
+                                background-color: v.$gris;
+                                border-radius: 2px; /* Bordes curvos */
+                                transform: translateY(-50%); /* Centrar verticalmente */
+                            }
+                        }
+                        ul {
+                            margin: 0;
+                            padding: 0 0 0 2rem;
+                            color: v.$rojo;
+                            span {
+                                color: v.$negro;
+                                font-size: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
             h4 {
                 font-size: 2rem;
                 color: v.$rojo;
@@ -177,6 +314,10 @@
                 margin-bottom: 1rem;
             }
             p {
+                &.color-red {
+                    color: v.$rojo;
+                    font-weight: bold;
+                }
                 color: v.$negro;
                 text-align: justify;
                 margin: 0;
