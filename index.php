@@ -13,7 +13,7 @@ incluirTemplate("header", $pagina = "principal");
     <section class="que-hacemos">
         <h2>&#191;Qué hacemos&#63;</h2>
         <div class="acciones">
-            <a href="#">
+            <a href="/que-hacemos?id=1">
                 <picture>
                     <source srcset="/build/img/01_Salud.avif" type="image/avif">
                     <source srcset="/build/img/01_Salud.webp" type="image/webp">
@@ -21,7 +21,7 @@ incluirTemplate("header", $pagina = "principal");
                 </picture>
                 <h3>Salud</h3>
             </a>
-            <a href="#">
+            <a href="/que-hacemos?id=2">
                 <picture>
                     <source srcset="/build/img/02_Caritas_Parroquial.avif" type="image/avif">
                     <source srcset="/build/img/02_Caritas_Parroquial.webp" type="image/webp">
@@ -29,7 +29,7 @@ incluirTemplate("header", $pagina = "principal");
                 </picture>
                 <h3>Cáritas parroquial</h3>
             </a>
-            <a href="#">
+            <a href="/que-hacemos?id=3">
                 <picture>
                     <source srcset="/build/img/03_Alimentos.avif" type="image/avif">
                     <source srcset="/build/img/03_Alimentos.webp" type="image/webp">
@@ -37,7 +37,7 @@ incluirTemplate("header", $pagina = "principal");
                 </picture>
                 <h3>Alimentos</h3>
             </a>
-            <a href="#">
+            <a href="/que-hacemos?id=4">
                 <picture>
                     <source srcset="/build/img/04_Casos_Especiales.avif" type="image/avif">
                     <source srcset="/build/img/04_Casos_Especiales.webp" type="image/webp">
@@ -60,7 +60,7 @@ incluirTemplate("header", $pagina = "principal");
     <section class="como-ayudar">
         <h2>&#191;Cómo ayudar&#63;</h2>
         <div class="contenedor">
-            <a href="#" class="como-ayudar_item">
+            <a href="/como-ayudar#1" class="como-ayudar_item">
                 <picture>
                     <source srcset="/build/img/01_Dona-tu-tiempo.avif" type="image/avif">
                     <source srcset="/build/img/01_Dona-tu-tiempo.webp" type="image/webp">
@@ -68,7 +68,7 @@ incluirTemplate("header", $pagina = "principal");
                 </picture>
                 <h3>Dona tu tiempo</h3>
             </a>
-            <a href="#" class="como-ayudar_item">
+            <a href="/como-ayudar#2" class="como-ayudar_item">
                 <picture>
                     <source srcset="/build/img/02_Dona-Recursos-Económicos.avif" type="image/avif">
                     <source srcset="/build/img/02_Dona-Recursos-Económicos.webp" type="image/webp">
@@ -76,7 +76,7 @@ incluirTemplate("header", $pagina = "principal");
                 </picture>
                 <h3>Dona recursos<br>económicos</h3>
             </a>
-            <a href="#" class="como-ayudar_item">
+            <a href="/como-ayudar#3" class="como-ayudar_item">
                 <picture>
                     <source srcset="/build/img/03_Dona-en-Especie.avif" type="image/avif">
                     <source srcset="/build/img/03_Dona-en-Especie.webp" type="image/webp">
@@ -84,7 +84,7 @@ incluirTemplate("header", $pagina = "principal");
                 </picture>
                 <h3>Dona en especie</h3>
             </a>
-            <a href="#" class="como-ayudar_item">
+            <a href="/como-ayudar#4" class="como-ayudar_item">
                 <picture>
                     <source srcset="/build/img/04_Apoya-como-empresa.avif" type="image/avif">
                     <source srcset="/build/img/04_Apoya-como-empresa.webp" type="image/webp">
@@ -92,7 +92,7 @@ incluirTemplate("header", $pagina = "principal");
                 </picture>
                 <h3>Apoya como<br>empresa</h3>
             </a>
-            <a href="#" class="como-ayudar_item">
+            <a href="/como-ayudar#5" class="como-ayudar_item">
                 <picture>
                     <source srcset="/build/img/05_Apoya-como-profesionista.avif" type="image/avif">
                     <source srcset="/build/img/05_Apoya-como-profesionista.webp" type="image/webp">

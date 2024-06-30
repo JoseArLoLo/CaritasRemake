@@ -1,5 +1,11 @@
 <?php
 require '../includes/app.php';
+$id = $_GET['id'];
+$id = filter_var($id, FILTER_VALIDATE_INT);
+
+if (!$id) {
+    $id = 1;
+}
 incluirTemplate("header", $pagina = "que-hacemos");
 ?>
 <main class="fondo-que-hacemos">
@@ -12,7 +18,7 @@ incluirTemplate("header", $pagina = "que-hacemos");
     </div>
     <section class="que-hacemos-acciones">
         <div class="menu">
-            <div class="menu-item active" data-content="salud">
+            <div class="menu-item <?php echo $id === 1 ? "active" : ""?>" data-content="salud">
                 <picture>
                     <source srcset="/build/img/01_Salud.avif" type="image/avif">
                     <source srcset="/build/img/01_Salud.webp" type="image/webp">
@@ -20,7 +26,7 @@ incluirTemplate("header", $pagina = "que-hacemos");
                 </picture>
                 <h3>Salud</h3>
             </div>
-            <div class="menu-item" data-content="caritas-parroquial">
+            <div class="menu-item <?php echo $id === 2 ? "active" : ""?>" data-content="caritas-parroquial">
                 <picture>
                     <source srcset="/build/img/02_Caritas_Parroquial.avif" type="image/avif">
                     <source srcset="/build/img/02_Caritas_Parroquial.webp" type="image/webp">
@@ -28,7 +34,7 @@ incluirTemplate("header", $pagina = "que-hacemos");
                 </picture>
                 <h3>Cáritas parroquial</h3>
             </div>
-            <div class="menu-item" data-content="alimentos">
+            <div class="menu-item <?php echo $id === 3 ? "active" : ""?>" data-content="alimentos">
                 <picture>
                     <source srcset="/build/img/03_Alimentos.avif" type="image/avif">
                     <source srcset="/build/img/03_Alimentos.webp" type="image/webp">
@@ -36,7 +42,7 @@ incluirTemplate("header", $pagina = "que-hacemos");
                 </picture>
                 <h3>Alimentos</h3>
             </div>
-            <div class="menu-item" data-content="casos-especiales">
+            <div class="menu-item  <?php echo $id === 4 ? "active" : ""?>" data-content="casos-especiales">
                 <picture>
                     <source srcset="/build/img/04_Casos_Especiales.avif" type="image/avif">
                     <source srcset="/build/img/04_Casos_Especiales.webp" type="image/webp">
@@ -45,7 +51,7 @@ incluirTemplate("header", $pagina = "que-hacemos");
                 <h3>Casos especiales</h3>
             </div>
         </div>
-        <div class="content active" id="salud">
+        <div class="content <?php echo $id === 1 ? "active" : ""?>" id="salud">
             <div class="salud_item_1">
                 <div class="item">
                     <h4>En el área de salud contamos con</h4>
@@ -98,7 +104,7 @@ incluirTemplate("header", $pagina = "que-hacemos");
                 </div>
             </div>
         </div>
-        <div class="content" id="caritas-parroquial">
+        <div class="content <?php echo $id === 2 ? "active" : ""?>" id="caritas-parroquial">
             <div class="caritas-parroquial_item_1">
                 <div class="item">
                     <h4>¿Qué es un Caritas Parroquial?</h4>
@@ -130,7 +136,7 @@ incluirTemplate("header", $pagina = "que-hacemos");
                 </div>
             </div>
         </div>
-        <div class="content" id="alimentos">
+        <div class="content <?php echo $id === 3 ? "active" : ""?>" id="alimentos">
             <div class="alimentos_item_1">
                 <div class="item">
                     <h4>¿Qué es un banco de alimentos?</h4>
@@ -203,8 +209,7 @@ incluirTemplate("header", $pagina = "que-hacemos");
                 </div>
             </div>
         </div>
-
-        <div class="content" id="casos-especiales">
+        <div class="content <?php echo $id === 4 ? "active" : ""?>" id="casos-especiales">
             <div class="casos-especiales_item_1">
                 <div class="item">
                     <h4>¿Cuáles son los casos especiales?</h4>

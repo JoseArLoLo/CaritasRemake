@@ -14,30 +14,30 @@
     <div class="contenedor footer_container">
         <div class="footer_item">
             <h1>Contacto</h1>
-            <div>
+            <a href="https://maps.app.goo.gl/gLqmjcNNTVppipHQ9">
                 <p>Benito Juarez S/N Col. Centro</p>
                 <p>C.P. 80000, Culiacan, Sinaloa, Mexico</p>
-            </div>
+            </a>
         </div>
         <div class="footer_item">
             <div></div>
             <div>
-                <p>
+                <a href="tel:6677157301">
                     <picture>
                         <source srcset="/build/img/Tel_Icon-05.avif" type="image/avif">
                         <source srcset="/build/img/Tel_Icon-05.webp" type="image/webp">
                         <img loading="lazy" src="/build/img/Tel_Icon-05.png" alt="Icono telefono">
                     </picture>
                     (667) 715 7301
-                </p>
-                <p>
+                </a>
+                <a href="tel:6677157242">
                     <picture>
                         <source srcset="/build/img/Tel_Icon-05.avif" type="image/avif">
                         <source srcset="/build/img/Tel_Icon-05.webp" type="image/webp">
                         <img loading="lazy" src="/build/img/Tel_Icon-05.png" alt="Icono telefono">
                     </picture>
                     (667) 715 7242
-                </p>
+                </a>
             </div>
         </div>
         <div class="footer_item">
@@ -73,8 +73,8 @@
 </footer>
 <script src="/build/js/header.js"></script>
 <script src="/build/js/modernizr.js"></script>
-<?php echo $pagina === "principal" ? '<script src="/build/js/nuestro-pan.js"></script>' : '';?>
-<?php echo $pagina === "que-hacemos" ? '<script src="/build/js/que-hacemos.js"></script>' : '';?>
+<?php echo $pagina === "principal" ? '<script src="/build/js/nuestro-pan.js"></script>' : ''; ?>
+<?php echo $pagina === "que-hacemos" ? '<script src="/build/js/que-hacemos.js"></script>' : ''; ?>
 </body>
 
 </html>

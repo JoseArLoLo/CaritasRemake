@@ -11,7 +11,7 @@ incluirTemplate("header", $pagina = "como-ayudar");
         </picture>
     </div>
     <section class="separador-doble esp">
-        <div class="item item-info">
+        <div class="item item-info" id="1">
             <picture>
                 <source srcset="/build/img/01_Dona-tu-tiempo.avif" type="image/avif">
                 <source srcset="/build/img/01_Dona-tu-tiempo.webp" type="image/webp">
@@ -22,7 +22,7 @@ incluirTemplate("header", $pagina = "como-ayudar");
                 <p>Realiza tu servicio social o voluntario en cualquiera de nuestras instalaciones de programas asistenciales, pregunta cómo.</p>
             </div>
         </div>
-        <div class="item item-info">
+        <div class="item item-info" id="2">
             <picture>
                 <source srcset="/build/img/02_Dona-Recursos-Económicos.avif" type="image/avif">
                 <source srcset="/build/img/02_Dona-Recursos-Económicos.webp" type="image/webp">
@@ -33,7 +33,7 @@ incluirTemplate("header", $pagina = "como-ayudar");
                 <p>Conviértete en un donante permanente o eventual aportando un importe económico, que se aprovechará para el buen funcionamiento de nuestra Institución y sus programas.</p>
             </div>
         </div>
-        <div class="item item-info">
+        <div class="item item-info" id="3">
             <picture>
                 <source srcset="/build/img/03_Dona-en-Especie.avif" type="image/avif">
                 <source srcset="/build/img/03_Dona-en-Especie.webp" type="image/webp">
@@ -44,7 +44,7 @@ incluirTemplate("header", $pagina = "como-ayudar");
                 <p>Aporta alimentos no perecederos, médicamentos, ropa o enseres domésticos para brindarles un mejor nivel de vida a nuestros beneficiarios.</p>
             </div>
         </div>
-        <div class="item item-info">
+        <div class="item item-info" id="4">
             <picture>
                 <source srcset="/build/img/04_Apoya-como-empresa.avif" type="image/avif">
                 <source srcset="/build/img/04_Apoya-como-empresa.webp" type="image/webp">
@@ -55,7 +55,7 @@ incluirTemplate("header", $pagina = "como-ayudar");
                 <p>Aporta económicamente, aporta tu donativo en especie, apoya con mantenimiento en instalaciones, integra tu equipo de voluntariado corporativo.</p>
             </div>
         </div>
-        <div class="item">
+        <div class="item" id="5">
             <picture>
                 <source srcset="/build/img/05_Apoya-como-profesionista.avif" type="image/avif">
                 <source srcset="/build/img/05_Apoya-como-profesionista.webp" type="image/webp">
