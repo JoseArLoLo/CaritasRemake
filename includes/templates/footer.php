@@ -1,15 +1,17 @@
-<div class="footer_donar">
-    <div class="content">
-        <h1>Tu donativo AYUDA MÁS que 1,000 likes</h1>
-        <a href="/donar">
-            <picture>
-                <source srcset="/build/img/donar_blanco.avif" type="image/avif">
-                <source srcset="/build/img/donar_blanco.webp" type="image/webp">
-                <img loading="lazy" src="/build/img/donar_blanco.png" alt="boton de donativo">
-            </picture>
-        </a>
+<?php if ($pagina !== "admin" && $pagina !== "login"): ?>
+    <div class="footer_donar">
+        <div class="content">
+            <h1>Tu donativo AYUDA MÁS que 1,000 likes</h1>
+            <a href="/donar">
+                <picture>
+                    <source srcset="/build/img/donar_blanco.avif" type="image/avif">
+                    <source srcset="/build/img/donar_blanco.webp" type="image/webp">
+                    <img loading="lazy" src="/build/img/donar_blanco.png" alt="boton de donativo">
+                </picture>
+            </a>
+        </div>
     </div>
-</div>
+<?php endif;?>
 <footer>
     <div class="contenedor footer_container">
         <div class="footer_item">
@@ -75,6 +77,7 @@
 <script src="/build/js/modernizr.js"></script>
 <?php echo $pagina === "principal" ? '<script src="/build/js/nuestro-pan.js"></script>' : ''; ?>
 <?php echo $pagina === "que-hacemos" ? '<script src="/build/js/que-hacemos.js"></script>' : ''; ?>
+<?php echo $pagina === "actividades" ? '<script src="/build/js/actividades.js"></script>' : ''; ?>
 </body>
 
 </html>

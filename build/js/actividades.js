@@ -1,0 +1,2 @@
+document.querySelectorAll(".actividad-content").forEach((e=>{const l=e.querySelector(".show-more-link"),t=e.querySelector(".show-less-link"),n=e.querySelector(".extra-content");l.addEventListener("click",(function(){n.style.display="block",l.style.display="none",t.style.display="block"})),t.addEventListener("click",(function(){n.style.display="none",t.style.display="none",l.style.display="block"}))}));
+//# sourceMappingURL=actividades.js.map

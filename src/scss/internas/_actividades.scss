@@ -1,0 +1,10 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.extra-content {
+    display: none;
+}
+.toggle-link {
+    color: blue;
+    cursor: pointer;
+}
