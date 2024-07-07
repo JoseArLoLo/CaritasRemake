@@ -1,4 +1,4 @@
-<?php if ($pagina !== "admin" && $pagina !== "login"): ?>
+<?php if ($pagina !== "admin" && $pagina !== "login" && $pagina !== "crear"): ?>
     <div class="footer_donar">
         <div class="content">
             <h1>Tu donativo AYUDA MÁS que 1,000 likes</h1>

@@ -1,6 +1,43 @@
 @use 'base/mixins' as m;
 @use 'base/variables' as v;
-
+$actividad_separacion: 2rem;
+.actividades {
+    width: min(95%, 120rem);
+    margin: 2rem auto;
+    .actividad {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 0;
+        flex-direction: column;
+        @include m.tablet {
+            flex-direction: row;
+        }
+        .actividad-imagen {
+            flex: 0 0 calc(50% - $actividad_separacion);
+            img {
+                border-radius: 3rem;
+            }
+        }
+        .actividad-content {
+            flex: 0 0 calc(50% - $actividad_separacion);
+            text-align: justify;
+            h3 {
+                color: v.$rojo;
+                font-weight: bold;
+                font-size: 2.85rem;
+            }
+            .actividad-fecha {
+                margin-top: .5rem;
+            }
+            p {
+                color: v.$negro;
+            }
+        }
+        &:not(:last-of-type) {
+            border-bottom: .1rem solid v.$gris;
+        }
+    }
+}
 .extra-content {
     display: none;
 }

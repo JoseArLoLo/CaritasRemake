@@ -1,0 +1,23 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.tablero-admin {
+    width: min(95%, 120rem);
+    margin: 2rem auto;
+    h3 {
+        color: v.$rojo;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .menu {
+        display: inline-block;
+        .boton {
+            padding: 1rem .5rem;
+            background-color: v.$rojo;
+            border-radius: 1rem;
+            text-align: center;
+            color: v.$blanco;
+            font-weight: bold;
+        }
+    }
+}
