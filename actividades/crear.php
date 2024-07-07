@@ -14,14 +14,12 @@ $titulo = '';
 $fecha = '';
 $imagen = '';
 $contenido = '';
-$creador = 'admin';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $titulo = mysqli_real_escape_string($db, s($_POST['titulo']));
     $fecha = mysqli_real_escape_string($db, s($_POST['fecha']));
     $imagen = $_FILES['imagen'];
     $contenido = mysqli_real_escape_string($db, s($_POST['contenido']));
-    $creador = 'admin';
 
     if (!$titulo || empty(trim($titulo))) {
         $errores[] = "Debes añadir un titulo valido";
@@ -49,10 +47,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $nombreImagen = '';
         if ($imagen['name']) {
             $nombreImagen = md5(uniqid(rand(), true)) . ".png";
-            move_uploaded_file($image['tmp_name'], $carpetaImagenes . $nombreImagen);
+            move_uploaded_file($imagen['tmp_name'], $carpeta . $nombreImagen);
         }
-        $query = "INSERT INTO `actividades` (`id`, `titulo`, `fecha`, `imagen`, `contenido`, `publicador`) VALUES (NULL, '$titulo', '$fecha', '$nombreImagen', '$contenido', '$creador')";
+        $query = "INSERT INTO `actividades` (`id`, `titulo`, `fecha`, `imagen`, `contenido`) VALUES (NULL, '$titulo', '$fecha', '$nombreImagen', '$contenido')";
         $resultado = mysqli_query($db, $query);
+        if ($resultado) {
+            // Redireccionar al usuario.
+            header('Location: /admin?resultado=1');
+        }
     }
 }
 
@@ -73,23 +75,20 @@ incluirTemplate("header", $pagina = "crear");
             <fieldset>
                 <legend>Informacion necesaria</legend>
 
-                <label for="title">Titulo:</label>
-                <input maxlength="45" type="text" id="title" name="title" placeholder="Titulo del evento" value="<?php echo $title; ?>">
+                <label for="titulo">Titulo:</label>
+                <input maxlength="400" type="text" id="titulo" name="titulo" placeholder="Titulo de la actividad" value="<?php echo $titulo; ?>">
+
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" placeholder="Fecha de la actividad" value="<?php echo $fecha; ?>">
 
                 <label for="imagen">Imagen:</label>
                 <input type="file" id="imagen" accept="image/jpeg, image/png" name="imagen">
 
-                <label for="description">Descripcion:</label>
-                <textarea maxlength="250" id="description" name="description" placeholder="Descripcion del evento"><?php echo $description; ?></textarea>
-
-                <label for="content">Contenido:</label>
-                <textarea id="content" name="content" placeholder="Contenido de la vista"><?php echo $content; ?></textarea>
-
-                <label for="due">Fecha:</label>
-                <input type="date" id="due" name="due" placeholder="Fecha tentativa del evento" value="<?php echo $due; ?>">
+                <label for="contenido">Contenido:</label>
+                <textarea id="contenido" name="contenido" placeholder="Contenido de la actividad"><?php echo $contenido; ?></textarea>
             </fieldset>
 
-            <input type="submit" value="Crear evento" class="boton-rojo">
+            <input type="submit" value="Crear actividad" class="boton">
         </form>
     </section>
 </main>

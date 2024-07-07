@@ -1,4 +1,4 @@
-<?php if ($pagina !== "admin" && $pagina !== "login" && $pagina !== "crear"): ?>
+<?php if ($pagina !== "admin" && $pagina !== "login" && $pagina !== "crear" && $pagina !== "actualizar" && $pagina !== "donadores"): ?>
     <div class="footer_donar">
         <div class="content">
             <h1>Tu donativo AYUDA MÁS que 1,000 likes</h1>
@@ -44,21 +44,21 @@
         </div>
         <div class="footer_item">
             <div class="icons">
-                <a href="">
+                <a href="https://www.facebook.com/caritasculiacan">
                     <picture>
                         <source srcset="/build/img/Facebook.avif" type="image/avif">
                         <source srcset="/build/img/Facebook.webp" type="image/webp">
                         <img loading="lazy" src="/build/img/Facebook.png" alt="Enlace hacia facebook">
                     </picture>
                 </a>
-                <a href="">
+                <a href="https://www.instagram.com/caritas_diocesana/">
                     <picture>
                         <source srcset="/build/img/Instagram.avif" type="image/avif">
                         <source srcset="/build/img/Instagram.webp" type="image/webp">
                         <img loading="lazy" src="/build/img/Instagram.png" alt="Enlace hacia instagram">
                     </picture>
                 </a>
-                <a href="">
+                <a href="https://twitter.com/caritascln">
                     <picture>
                         <source srcset="/build/img/Twitter.avif" type="image/avif">
                         <source srcset="/build/img/Twitter.webp" type="image/webp">

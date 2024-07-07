@@ -21,3 +21,115 @@
         }
     }
 }
+.contenedor-tabla {
+    width: min(95%, 120rem);
+    margin: 2rem auto;
+
+    table.tabla {
+        margin-top: 2rem;
+        width: 100%; overflow-x: auto;
+        border-spacing: 0;
+        thead {
+            background-color: v.$rojo;
+    
+            th {
+                color: v.$blanco;
+                padding: 2rem;
+            }
+        }
+        td {
+            border: 1px solid v.$rojo;
+            text-align: center;
+        }
+        .imagen-tabla {
+            width: 10rem;
+            margin: 0 auto;
+        }
+    }
+    .edicion {
+        .w-100 {
+            width: 100%;
+        }
+        a, input {
+            display: block;
+            background-color: v.$negro;
+            width: 100%;
+            margin: 1rem 0;
+            color: v.$blanco;
+            font-weight: bold;
+            padding: 1rem .5rem;
+            border: none;
+            border-radius: 1rem;
+            cursor: pointer;
+        }
+        a {
+            background-color: v.$rojo;
+        }
+    }
+}
+.edicion-actividad {
+    width: min(95%, 120rem);
+    margin: 1rem auto;
+    .informacion {
+        h3 {
+            text-align: center;
+            color: v.$rojo;
+        }
+    }
+    a, input[type="submit"] {
+        padding: 1rem .5rem;
+        background-color: v.$rojo;
+        color: v.$blanco;
+        font-weight: bold;
+        display: inline-block;
+        border: none;
+        border-radius: 3rem;
+        margin: 1rem 0;
+        cursor: pointer;
+    }
+    form.formulario {
+        img.imagen-small {
+            width: 20rem;
+        }
+        p {
+            font-size: 1.4rem;
+            color: #333333;
+            margin: 2rem 0 0 0;
+        }
+        legend {
+            font-size: 2rem;
+            color: #333333;
+        }
+        label {
+            font-weight: 700;
+            text-transform: uppercase;
+            display: block;
+        }
+        input:not([type="submit"]),
+        textarea,
+        select {
+            padding: 1rem;
+            display: block;
+            width: 100%;
+            background-color: v.$blanco;
+            border: 1px solid darken(v.$blanco, 25%);
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+        }
+        textarea {
+            height: 20rem;
+        }
+        .forma-contacto {
+            max-width: 30rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        input[type="radio"] {
+            margin: 0;
+            width: auto;
+        }
+    }
+    
+}
