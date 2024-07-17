@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $titulo = mysqli_real_escape_string($db, s($_POST['titulo']));
     $fecha = mysqli_real_escape_string($db, s($_POST['fecha']));
     $imagen = $_FILES['imagen'];
-    $contenido = mysqli_real_escape_string($db, s($_POST['contenido']));
+    $contenido = mysqli_real_escape_string($db, $_POST['contenido']);
 
     if (!$titulo || empty(trim($titulo))) {
         $errores[] = "Debes añadir un titulo valido";

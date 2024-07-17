@@ -1,14 +1,19 @@
 <?php
 require 'includes/app.php';
+$bannerPath = "uploads/banner/banner.png";
 incluirTemplate("header", $pagina = "principal");
 ?>
 <main>
     <div class="banner">
-        <picture>
-            <source srcset="/build/img/banner_1.avif" type="image/avif">
-            <source srcset="/build/img/banner_1.webp" type="image/webp">
-            <img loading="lazy" src="/build/img/banner_1.png" alt="Banner inicio">
-        </picture>
+        <?php if (file_exists($bannerPath)) :  ?>
+            <img loading="lazy" src="/<?php echo $bannerPath; ?>" alt="Banner inicio">
+        <?php else : ?>
+            <picture>
+                <source srcset="/build/img/banner_1.avif" type="image/avif">
+                <source srcset="/build/img/banner_1.webp" type="image/webp">
+                <img loading="lazy" src="/build/img/banner_1.png" alt="Banner inicio">
+            </picture>
+        <?php endif; ?>
     </div>
     <section class="que-hacemos">
         <h2>&#191;Qué hacemos&#63;</h2>

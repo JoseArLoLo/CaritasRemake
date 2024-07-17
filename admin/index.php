@@ -31,6 +31,7 @@ incluirTemplate("header", $pagina = "admin");
         <div class="menu">
             <a class="boton" href="/close-sesion.php">Cerrar Sesion</a>
             <a class="boton" href="/actividades/crear.php">Crear actividad</a>
+            <a class="boton" href="/admin/banner.php">Cambiar banner</a>
             <a class="boton" href="/admin/donadores.php">Donadores</a>
         </div>
     </div>
