@@ -2,6 +2,8 @@
 @use "base/mixins" as m;
 
 .que-hacemos {
+    width: min(95%, 120rem);
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -13,19 +15,15 @@
     .acciones {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-evenly;
         gap: 2.5rem;
-        @include m.telefono {
-            gap: 3.5rem;
-        }
-        @include m.tablet {
-            gap: 4.5rem;
-        }
+        text-align: center;
         a {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
+            align-content: center;
             flex-wrap: wrap;
             gap: 1.5rem;
             max-width: 15rem;

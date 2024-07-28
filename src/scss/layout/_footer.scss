@@ -76,6 +76,9 @@ footer {
                     width: auto;
                     vertical-align: middle;
                 }
+                &.esp {
+                    text-align: right;
+                }
             }
             .icons {
                 display: flex;

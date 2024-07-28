@@ -67,8 +67,8 @@
                 </a>
             </div>
             <div>
-                <p>&#174;<?php echo date('Y'); ?>. Caritas Diocesana de Culiacan Todos los derechos reservados.</p>
-                <p>Aviso de Privacidad.</p>
+                <p class="esp">&#174;<?php echo date('Y'); ?>. Caritas Diocesana de Culiacan Todos los derechos reservados.</p>
+                <p class="esp">Aviso de Privacidad.</p>
             </div>
         </div>
     </div>
