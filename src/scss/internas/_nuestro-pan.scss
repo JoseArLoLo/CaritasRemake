@@ -61,15 +61,15 @@
                     border-bottom: 2px solid v.$gris;
                     border-radius: 10px;
                     object-fit: cover;
-                    height: 20rem;
-                    width: 21rem;
+                    height: 18rem;
+                    width: 19rem;
                     @include m.tablet {
-                        height: 22rem;
-                        width: 23rem;
+                        height: 20rem;
+                        width: 21rem;
                     }
                     @include m.desktop {
-                        height: 24rem;
-                        width: 25rem;
+                        height: 22rem;
+                        width: 23rem;
                     }
                 }
                 .carousel__caption {
