@@ -1,8 +1,10 @@
 @use "base/variables" as v;
 @use "base/mixins" as m;
+
 .fondo-que-hacemos {
     background-color: v.$gris;
 }
+
 .que-hacemos-acciones {
     width: min(90%, 97rem);
     margin: 0 auto;
@@ -13,63 +15,76 @@
         justify-content: space-between;
         background-color: v.$gris;
         padding-bottom: 2rem;
+
         .menu-item {
-            flex: 0 0 25%;
+            flex: 0 0 33.3%; // 100 / 3 elementos que habrá
             width: 100%;
             cursor: pointer;
             padding: 0.5rem 0.5rem 3rem 0.5rem;
+
             @include m.small {
                 padding: 0.7rem 0.7rem 3rem 0.7rem;
             }
+
             @include m.telefono {
                 padding: 1rem 1.5rem 3rem 1.5rem;
             }
+
             @include m.tablet {
                 padding: 1rem 2rem 3rem 2rem;
             }
+
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
             gap: 1.5rem;
             border-radius: 1rem 1rem 0 0;
-            transition:
-                background-color 0.3s,
-                border 0.3s;
+            transition: background-color 0.3s,
+            border 0.3s;
 
             &:hover,
             &.active {
                 background-color: v.$blanco;
             }
+
             img {
                 max-height: 1.8rem;
                 width: auto;
+
                 @include m.small {
                     max-height: 2rem;
                 }
+
                 @include m.telefono {
                     max-height: 2.5rem;
                 }
+
                 @include m.tablet {
                     max-height: 5rem;
                 }
             }
+
             h3 {
                 color: v.$negroLuminoso;
                 text-align: center;
                 font-size: 1.3rem;
+
                 @include m.small {
                     font-size: 1.4rem;
                 }
+
                 @include m.telefono {
                     font-size: 1.65rem;
                 }
+
                 @include m.tablet {
                     font-size: 2.5rem;
                 }
             }
         }
     }
+
     .content {
         background-color: v.$blanco;
         opacity: 0;
@@ -78,6 +93,7 @@
         transition:
             opacity 0.5s ease-in-out,
             max-height 0.5s ease-in-out;
+
         &.active {
             opacity: 1;
             max-height: 400rem;
@@ -85,91 +101,91 @@
             margin-bottom: 2rem;
             margin-top: -3rem;
             padding: 2.5rem;
+
             &#salud {
+                h3 {
+                    color: v.$rojo;
+                    font-size: 2.5rem;
+                    margin-bottom: 1rem;
+                }
+
                 .salud_item_1 {
-                    display: flex;
-                    justify-content: space-between;
-                    flex-direction: column;
+                    p {
+                        margin-bottom: 1.7rem;
+                    }
+
+                    div.container {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        @include m.tablet {
+                            flex-direction: row;
+                        }
+                    }
+
+                    div {
+                        flex: 0 0 calc(50% - 1rem);
+
+                        &.salud_element_2 {
+                            align-content: flex-start;
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            gap: 2rem;
+                            justify-content: center;
+                            margin-bottom: 1.7rem;
+
+                            @include m.tablet {
+                                margin-bottom: 0;
+                            }
+
+                            picture {
+                                width: 15rem;
+                                height: 15rem;
+
+                                @include m.tablet {
+                                    width: 17rem;
+                                    height: 17rem;
+                                }
+
+                                @include m.desktop {
+                                    width: 19rem;
+                                    height: 19rem;
+                                }
+
+                                @include m.desktopXL {
+                                    width: 21rem;
+                                    height: 21rem;
+                                }
+                            }
+                        }
+                    }
+
                     border-bottom: 0.1rem solid v.$gris;
-                    padding-bottom: 1rem;
-                    @include m.tablet {
-                        flex-direction: row;
-                    }
-                    .item {
-                        flex: 0 0 calc(50% - 2rem);
-                    }
                 }
+
                 .salud_item_2 {
-                    display: flex;
-                    justify-content: space-between;
-                    flex-direction: column;
-                    @include m.tablet {
-                        flex-direction: row;
+                    margin-top: 1.7rem;
+
+                    img {
+                        display: inline-block;
+                        height: 1em;
+                        vertical-align: middle;
+                        width: auto;
                     }
-                    .item {
-                        margin-top: 2rem;
-                        position: relative;
-                        flex: 0 0 calc(50% - 2rem);
-                        @include m.tablet {
-                            &:not(:last-child)::after {
-                                content: "";
-                                position: absolute;
-                                top: 50%;
-                                right: -2rem;
-                                width: 0.1rem; /* Grosor de la línea */
-                                height: 100%; /* Altura de la línea */
-                                background-color: v.$gris;
-                                border-radius: 2px; /* Bordes curvos */
-                                transform: translateY(-50%); /* Centrar verticalmente */
-                            }
-                        }
+
+                    .container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        gap: 1rem;
+                        margin-bottom: 1.7rem;
                     }
-                }
-            }
-            &#caritas-parroquial {
-                .caritas-parroquial_item_1 {
-                    display: flex;
-                    justify-content: space-between;
-                    flex-direction: column;
                     border-bottom: 0.1rem solid v.$gris;
-                    padding-bottom: 2rem;
-                    @include m.tablet {
-                        flex-direction: row;
-                    }
-                    .item {
-                        flex: 0 0 calc(50% - 2rem);
-                        position: relative;
-                        img {
-                            margin-top: 1rem;
-                        }
-                        @include m.tablet {
-                            &:not(:last-child)::after {
-                                content: "";
-                                position: absolute;
-                                top: 50%;
-                                right: -2rem;
-                                width: 0.1rem; /* Grosor de la línea */
-                                height: 100%; /* Altura de la línea */
-                                background-color: v.$gris;
-                                border-radius: 2px; /* Bordes curvos */
-                                transform: translateY(-50%); /* Centrar verticalmente */
-                            }
-                        }
-                    }
-                }
-                .caritas-parroquial_item_2 {
-                    display: flex;
-                    justify-content: space-between;
-                    flex-direction: column;
-                    margin-top: 2rem;
-                    @include m.tablet {
-                        flex-direction: row;
-                    }
-                    .item {
-                        flex: 0 0 calc(50% - 2rem);
-                    }
                 }
             }
+
             &#alimentos {
                 .alimentos_item_1 {
                     display: flex;
@@ -177,11 +193,14 @@
                     flex-direction: column;
                     border-bottom: 0.1rem solid v.$gris;
                     padding-bottom: 2rem;
+
                     @include m.tablet {
                         flex-direction: row;
                     }
+
                     .item {
                         flex: 0 0 calc(50% - 2rem);
+
                         img {
                             max-width: 100%;
                             max-height: 100%;
@@ -191,6 +210,7 @@
                         }
                     }
                 }
+
                 .alimentos_item_2,
                 .alimentos_item_4 {
                     margin-top: 2rem;
@@ -201,12 +221,15 @@
                     @include m.tablet {
                         flex-direction: row;
                     }
+
                     .item {
                         flex: 0 0 calc(50% - 2rem);
+
                         ul {
                             margin: 0;
                             padding: 0 0 0 2rem;
                             color: v.$rojo;
+
                             span {
                                 color: v.$negro;
                                 font-size: 2rem;
@@ -214,25 +237,31 @@
                         }
                     }
                 }
+
                 .alimentos_item_3 {
                     display: flex;
                     justify-content: space-between;
                     flex-direction: column;
                     border-bottom: 0.1rem solid v.$gris;
                     padding-bottom: 2rem;
+
                     .item {
                         padding: 2rem;
+
                         @include m.telefono {
                             padding: 2rem 8rem;
                         }
+
                         @include m.tablet {
                             padding: 2rem 10rem;
                         }
+
                         &:last-of-type {
                             display: flex;
                             justify-content: space-between;
                             flex-direction: row;
                             padding: unset;
+
                             p {
                                 flex: 0 0 30%;
                                 text-align: center;
@@ -242,6 +271,7 @@
                     }
                 }
             }
+
             &#casos-especiales {
                 .casos-especiales_item_1 {
                     display: flex;
@@ -249,55 +279,72 @@
                     flex-direction: column;
                     border-bottom: 0.1rem solid v.$gris;
                     padding-bottom: 1rem;
+
                     @include m.tablet {
                         flex-direction: row;
                     }
+
                     .item {
                         position: relative;
                         flex: 0 0 calc(50% - 2rem);
+
                         @include m.tablet {
                             &:not(:last-child)::after {
                                 content: "";
                                 position: absolute;
                                 top: 50%;
                                 right: -2rem;
-                                width: 0.1rem; /* Grosor de la línea */
-                                height: 100%; /* Altura de la línea */
+                                width: 0.1rem;
+                                /* Grosor de la línea */
+                                height: 100%;
+                                /* Altura de la línea */
                                 background-color: v.$gris;
-                                border-radius: 2px; /* Bordes curvos */
-                                transform: translateY(-50%); /* Centrar verticalmente */
+                                border-radius: 2px;
+                                /* Bordes curvos */
+                                transform: translateY(-50%);
+                                /* Centrar verticalmente */
                             }
                         }
                     }
                 }
+
                 .casos-especiales_item_2 {
                     display: flex;
                     justify-content: space-between;
                     flex-direction: column;
+
                     @include m.tablet {
                         flex-direction: row;
                     }
+
                     .item {
                         margin-top: 2rem;
                         position: relative;
                         flex: 0 0 calc(50% - 2rem);
+
                         @include m.tablet {
                             &:not(:last-child)::after {
                                 content: "";
                                 position: absolute;
                                 top: 50%;
                                 right: -2rem;
-                                width: 0.1rem; /* Grosor de la línea */
-                                height: 100%; /* Altura de la línea */
+                                width: 0.1rem;
+                                /* Grosor de la línea */
+                                height: 100%;
+                                /* Altura de la línea */
                                 background-color: v.$gris;
-                                border-radius: 2px; /* Bordes curvos */
-                                transform: translateY(-50%); /* Centrar verticalmente */
+                                border-radius: 2px;
+                                /* Bordes curvos */
+                                transform: translateY(-50%);
+                                /* Centrar verticalmente */
                             }
                         }
+
                         ul {
                             margin: 0;
                             padding: 0 0 0 2rem;
                             color: v.$rojo;
+
                             span {
                                 color: v.$negro;
                                 font-size: 2rem;
@@ -306,6 +353,7 @@
                     }
                 }
             }
+
             h4 {
                 font-size: 2rem;
                 color: v.$rojo;
@@ -313,35 +361,43 @@
                 margin: 0;
                 margin-bottom: 1rem;
             }
-            p {
+
+            p,
+            a {
                 &.color-red {
                     color: v.$rojo;
                     font-weight: bold;
                 }
+
                 color: v.$negro;
                 text-align: justify;
                 margin: 0;
             }
+
             .item {
                 .item_container {
                     display: flex;
                     flex-direction: column;
                     padding: 1.5rem;
                     gap: 1rem;
+
                     div {
                         display: flex;
                         flex-direction: row;
                         align-items: center;
                         justify-content: space-between;
+
                         img {
                             max-height: 4rem;
                             width: auto;
                             margin: 0 auto;
                             object-fit: cover;
                         }
+
                         p {
                             flex: 0 0 calc(90% - 0.2rem);
                         }
+
                         picture {
                             flex: 0 0 calc(10% - 0.2rem);
                         }

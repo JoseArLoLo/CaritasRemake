@@ -26,15 +26,7 @@ incluirTemplate("header", $pagina = "principal");
                 </picture>
                 <h3>Salud</h3>
             </a>
-            <!-- <a href="/que-hacemos?id=2">
-                <picture>
-                    <source srcset="/build/img/02_Caritas_Parroquial.avif" type="image/avif">
-                    <source srcset="/build/img/02_Caritas_Parroquial.webp" type="image/webp">
-                    <img loading="lazy" src="/build/img/02_Caritas_Parroquial.png" alt="Icono caritas parroquial">
-                </picture>
-                <h3>Cáritas parroquial</h3>
-            </a> -->
-            <a href="/que-hacemos?id=3">
+            <a href="/que-hacemos?id=2">
                 <picture>
                     <source srcset="/build/img/03_Alimentos.avif" type="image/avif">
                     <source srcset="/build/img/03_Alimentos.webp" type="image/webp">
@@ -42,7 +34,7 @@ incluirTemplate("header", $pagina = "principal");
                 </picture>
                 <h3>Alimentación</h3>
             </a>
-            <a href="/que-hacemos?id=4">
+            <a href="/que-hacemos?id=3">
                 <picture>
                     <source srcset="/build/img/04_Casos_Especiales.avif" type="image/avif">
                     <source srcset="/build/img/04_Casos_Especiales.webp" type="image/webp">
