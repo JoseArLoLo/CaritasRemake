@@ -46,12 +46,12 @@ incluirTemplate("header", $pagina = "principal");
     </section>
     <section class="promocional">
         <div class="contenedor">
-            <img src="/build/img/logo caritas.svg" alt="logo de la institucion">
+            <img src="/build/img/logo-caritas.svg" alt="logo de la institucion">
             <div>
                 <h3>En la Diócesis de Culiacán,</h3>
                 <p>Caritas tiene <span class="bold"><?php echo (intval(date('Y')) - 1989); ?> años</span> ayudando a los <br class="jump"> más necesitados del centro y norte del estado</p>
             </div>
-            <img src="/build/img/logo caritas.svg" alt="logo de la institucion">
+            <img src="/build/img/logo-caritas.svg" alt="logo de la institucion">
         </div>
     </section>
     <section class="como-ayudar">
