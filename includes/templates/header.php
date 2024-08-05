@@ -31,7 +31,7 @@
             </div>
             <ul class="header_nav_opciones">
                 <li><a <?php echo $pagina === "que-hacemos" ? 'class="active"' : '';?> href="/que-hacemos?id=1">¿Qué hacemos?</a></li>
-                <li><a <?php echo $pagina === "caritas-diocesana" ? 'class="active"' : '';?> href="/caritas-diocesana">Cáritas Diocesana</a></li>
+                <li><a <?php echo $pagina === "nosotros" ? 'class="active"' : '';?> href="/nosotros">Nosotros</a></li>
                 <li><a <?php echo $pagina === "como-ayudar" ? 'class="active"' : '';?> href="/como-ayudar">¿Cómo ayudar?</a></li>
                 <li><a <?php echo $pagina === "actividades" ? 'class="active"' : '';?> href="/actividades">Actividades</a></li>
                 <li class="header_nav_donar">

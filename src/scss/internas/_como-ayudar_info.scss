@@ -1,0 +1,153 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.como-ayudar-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    text-align: justify;
+    width: min(95%, 120rem);
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include m.tablet {
+        flex-direction: row;
+    }
+
+    .como-ayudar_item {
+        flex: 0 0 calc(50% - 1.7rem);
+
+        &:last-of-type {
+            align-content: center;
+        }
+
+        .container {
+            margin: 2.5rem;
+
+            h3 {
+                margin: 1rem 0 2rem 0;
+                color: v.$rojo;
+                font-size: 2.5rem;
+            }
+
+            p {
+                margin-bottom: 2rem;
+            }
+
+            a {
+                display: inline-block;
+                background-color: v.$rojo;
+                color: v.$blanco;
+                font-size: 2rem;
+                font-weight: 700;
+                border-radius: 5rem;
+                padding: 1rem 1rem;
+                cursor: pointer;
+            }
+
+            &:last-child {
+                padding: 2rem;
+            }
+        }
+    }
+}
+
+.informacion-ayudar {
+    animation: fadeIn .5s ease-in-out;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 .1rem rgba(0, 0, 0, .5);
+    display: none;
+    left: 50%;
+    max-height: 90%;
+    width: min(95%, 95rem);
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1003;
+
+    h3 {
+        margin: 0 0 2rem 0;
+        color: v.$rojo;
+        font-size: 2.5rem;
+    }
+
+    &.active {
+        display: block;
+    }
+
+    .header {
+        background-color: v.$rojo;
+        color: v.$blanco;
+        padding: 1rem 2rem;
+        border-radius: 2rem 2rem 0 0;
+
+        .container {
+            position: relative;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+
+            @include m.tablet {
+                flex-direction: row;
+
+                h2:after {
+                    background-color: v.$blanco;
+                    border-radius: 2px;
+                    content: "";
+                    height: 90%;
+                    position: absolute;
+                    right: 50%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: .3rem;
+                }
+            }
+
+            h2,
+            h4 {
+                flex: 0 0 calc(50% - 2rem);
+                margin: 0;
+            }
+            h4 {
+                font-size: 2rem;
+            }
+        }
+
+        span.close-btn {
+            cursor: pointer;
+            position: absolute;
+            font-size: 2.5rem;
+            right: 2rem;
+            top: 1rem;
+        }
+    }
+
+    .body {
+        text-align: justify;
+
+        .banner {
+            background-color: v.$blanco;
+            padding: 2rem;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            * {
+                flex: 0 0 calc(50% - 4rem);
+            }
+
+            .container {
+                align-content: center;
+            }
+
+            img {
+                max-height: 26rem;
+            }
+        }
+    }
+}

@@ -2,9 +2,11 @@
 @use "base/mixins" as m;
 
 header.header {
-    width: min(95%, 120rem);
-    margin: 0 auto;
     text-decoration: none;
+    position: relative;
+    z-index: 1002;
+    background-color: v.$blanco;
+    width: 100%;
 
     .header_nav {
         @include m.resetear-lista();
@@ -13,6 +15,8 @@ header.header {
         justify-content: space-between;
         align-items: center;
         padding: 1rem;
+        width: min(95%, 120rem);
+        margin: 0 auto;
 
         @include m.tablet {
             flex-direction: row;
@@ -21,23 +25,29 @@ header.header {
                 margin-bottom: 0;
             }
         }
+
         .mobile-menu {
             @include m.tablet {
                 display: none;
             }
+
             img {
                 width: 2.5rem;
             }
         }
+
         .header_nav_logo {
             margin-bottom: 1rem;
+
             @include m.tablet {
                 margin-bottom: unset;
             }
         }
+
         .header_nav_logo,
         .header_nav_donar {
             background-color: transparent;
+
             img {
                 max-height: 3rem;
                 width: auto;
@@ -53,11 +63,13 @@ header.header {
                 visibility 0.3s ease-in-out,
                 opacity 0.5s linear,
                 height 0.5s linear;
+
             @include m.tablet {
                 visibility: visible;
                 opacity: 1;
                 height: auto;
             }
+
             li {
                 position: relative;
                 display: block;
@@ -74,11 +86,15 @@ header.header {
                         position: absolute;
                         top: 50%;
                         right: -1rem;
-                        width: 2.5px; /* Grosor de la línea */
-                        height: 80%; /* Altura de la línea */
+                        width: 2.5px;
+                        /* Grosor de la línea */
+                        height: 80%;
+                        /* Altura de la línea */
                         background-color: v.$rojoBrillante;
-                        border-radius: 2px; /* Bordes curvos */
-                        transform: translateY(-50%); /* Centrar verticalmente */
+                        border-radius: 2px;
+                        /* Bordes curvos */
+                        transform: translateY(-50%);
+                        /* Centrar verticalmente */
                     }
                 }
 
@@ -87,6 +103,7 @@ header.header {
                     font-weight: bold;
                     font-size: 1.4rem;
                     transition: all 0.3s ease-in;
+
                     &.active,
                     &:hover {
                         color: v.$rojo;
@@ -97,6 +114,7 @@ header.header {
                     margin-right: 0;
                 }
             }
+
             &.mostrar {
                 visibility: visible;
                 opacity: 1;

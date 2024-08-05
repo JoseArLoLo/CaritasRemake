@@ -78,6 +78,7 @@
 <?php echo $pagina === "principal" ? '<script src="/build/js/nuestro-pan.js"></script>' : ''; ?>
 <?php echo $pagina === "que-hacemos" ? '<script src="/build/js/que-hacemos.js"></script>' : ''; ?>
 <?php echo $pagina === "actividades" ? '<script src="/build/js/actividades.js"></script>' : ''; ?>
+<?php echo $pagina === "como-ayudar" ? '<script src="/build/js/como-ayudar.js"></script>' : ''; ?>
 </body>
 
 </html>

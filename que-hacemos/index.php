@@ -176,11 +176,11 @@ incluirTemplate("header", $pagina = "que-hacemos");
         <div class="content <?php echo $id === 3 ? "active" : "" ?>" id="formacion-valores">
             <div class="formacion-valores_item_1">
                 <div class="container">
-                    <div class="alimentacion_element_1">
+                    <div class="formacion-valores_element_1">
                         <p class="color-red">¿Qué es la formación de valores?</p>
                         <p>A medida que las familias buscan enriquecer la vida de sus hijos y fortalecer los vínculos familiares, la promoción de valores ofrece una oportunidad invaluable. Estos programas, al ofrecer una variedad de talleres diseñados para cultivar virtudes como la empatía, crear un entorno social y fomentar el trabajo en equipo, además de mejorar considerablemente el crecimiento personal de los niños, y asi promover una mayor unión familiar.</p>
                     </div>
-                    <div class="alimentacion_element_2">
+                    <div class="formacion-valores_element_2">
                         <picture>
                             <source srcset="/build/img/01_FV_Imagen.avif" type="image/avif">
                             <source srcset="/build/img/01_FV_Imagen.webp" type="image/webp">
@@ -191,20 +191,38 @@ incluirTemplate("header", $pagina = "que-hacemos");
             </div>
             <div class="formacion-valores_item_2">
                 <div class="container">
-                    <div class="alimentacion_element_1">
+                    <div class="formacion-valores_element_1">
                         <picture>
                             <source srcset="/build/img/02_FV_Imagen.avif" type="image/avif">
                             <source srcset="/build/img/02_FV_Imagen.webp" type="image/webp">
                             <img loading="lazy" src="/build/img/02_FV_Imagen.png" alt="Formacion de valores imagen 1">
                         </picture>
                     </div>
-                    <div class="alimentacion_element_2">
+                    <div class="formacion-valores_element_2">
                         <h3>¡Únete a nuestras actividades!</h3>
                         <p>Descubre la magia de aprender juntos en nuestros emocionantes talleres diseñados para madres y niños. Desde actividades que fortalecerán tu creatividad hasta emocionantes desafíos y mentales; nuestra programación ofrece una experiencia enriquecedora para toda la familia.</p>
                     </div>
                 </div>
             </div>
-            <div class="formacion-valores_item_3"></div>
+            <div class="formacion-valores_item_3">
+                <div class="container">
+                    <div class="formacion-valores_element_1">
+                        <h3>Conoce nuestros talleres</h3>
+                        <p>En Cáritas contamos con diferentes tipos y variedad de talleres enfocados para niños, madres y familiar donde también pueden convivir con más personas y pasar un momento agradable.</p>
+                        <picture>
+                            <source srcset="/build/img/Iconos_Talleres.avif" type="image/avif">
+                            <source srcset="/build/img/Iconos_Talleres.webp" type="image/webp">
+                            <img loading="lazy" src="/build/img/Iconos_Talleres.png" alt="Talleres disponibles">
+                        </picture>
+                    </div>
+                    <div class="formacion-valores_element_2">
+                        <h3>¿Deseas ser parte de algún taller?</h3>
+                        <p>En Cáritas contamos con diferentes tipos y Si estas interesado(a) en inscribirte en alguno de ellos, dirígete al taller que deseas (Menú principal > Programas > Formación de valores > "Elige el taller al que deseas unirte"), revisa toda la información disponible para conocer nuestros horarios y disponibilidad, y contáctarnos por teléfono o acude a nuestras oficinas.</p>
+                        <p>Únete a nosotros mientras exploramos, creamos recuerdos inolvidables y cultivamos conexiones duraderas.</p>
+                        <p class="bold">IMPORTANTE: La disponibilidad de cada taller puede variar dependiendo de la demanda del mismo.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </main>

@@ -10,6 +10,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
+    z-index: 1002;
     .content {
         margin: 0 auto;
         width: min(95%, 90rem);
@@ -41,6 +43,8 @@ footer {
     margin: 0 auto;
     background-color: v.$negroLuminoso;
     padding: 1.5rem 0;
+    position: relative;
+    z-index: 1002;
     .footer_container {
         display: flex;
         flex-wrap: nowrap;

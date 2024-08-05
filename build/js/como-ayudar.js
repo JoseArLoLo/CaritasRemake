@@ -1,0 +1,2 @@
+const menu_1=document.querySelector(".informacion-dona-tiempo"),menus=document.querySelectorAll(".informacion-ayudar"),overlay=document.getElementById("overlay");menus.forEach((e=>{e.querySelectorAll(".close-btn").forEach((e=>{e.addEventListener("click",(function(){menus.forEach((e=>e.classList.remove("active"))),overlay.classList.remove("active")}))}))})),menu_1.addEventListener("click",(function(){menus.forEach((e=>e.classList.remove("active"))),overlay.classList.add("active"),menus[0].classList.add("active")}));
+//# sourceMappingURL=como-ayudar.js.map
