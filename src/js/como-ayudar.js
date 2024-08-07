@@ -1,4 +1,8 @@
 const menu_1 = document.querySelector(".informacion-dona-tiempo");
+const menu_2 = document.querySelector(".informacion-dona-recursos");
+const menu_3 = document.querySelector(".informacion-dona-especie");
+const menu_4 = document.querySelector(".informacion-dona-empresa");
+const menu_5 = document.querySelector(".informacion-dona-profesionista");
 const menus = document.querySelectorAll(".informacion-ayudar");
 const overlay = document.getElementById("overlay");
 menus.forEach(item => {
@@ -15,19 +19,23 @@ menu_1.addEventListener('click', function () {
     overlay.classList.add("active");
     menus[0].classList.add('active');
 });
-
-/*
-const iconos = document.querySelectorAll('.sin-datos')
-    iconos.forEach(item => {
-        item.addEventListener('click', function() {
-            document.getElementById('overlay').style.display = 'block';
-            document.getElementById('popup-container').style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        });
-    })
-    document.getElementById('close-btn').addEventListener('click', function() {
-        document.getElementById('overlay').style.display = 'none';
-        document.getElementById('popup-container').style.display = 'none';
-        document.body.style.overflow = 'auto';
-    });
-*/
+menu_2.addEventListener('click', function () {
+    menus.forEach(item => item.classList.remove('active'));
+    overlay.classList.add("active");
+    menus[1].classList.add('active');
+});
+menu_3.addEventListener('click', function () {
+    menus.forEach(item => item.classList.remove('active'));
+    overlay.classList.add("active");
+    menus[2].classList.add('active');
+});
+menu_4.addEventListener('click', function () {
+    menus.forEach(item => item.classList.remove('active'));
+    overlay.classList.add("active");
+    menus[3].classList.add('active');
+});
+menu_5.addEventListener('click', function () {
+    menus.forEach(item => item.classList.remove('active'));
+    overlay.classList.add("active");
+    menus[4].classList.add('active');
+});

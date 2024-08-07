@@ -42,6 +42,7 @@ $actividad_separacion: 2rem;
     display: none;
 }
 .toggle-link {
-    color: blue;
+    color: v.$rojo !important;
     cursor: pointer;
+    text-decoration: underline;
 }

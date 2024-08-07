@@ -1,0 +1,92 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.donativo {
+    width: min(95%, 120rem);
+    margin: 2rem auto;
+
+    .superior {
+        text-align: center;
+        margin-bottom: 1.5rem;
+
+        h3 {
+            color: v.$rojo;
+            margin: 0;
+        }
+
+        p {
+            margin: 1rem 0 2rem 0;
+        }
+
+        p.leyenda {
+            color: v.$rojo !important;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        span {
+            color: v.$negro;
+            font-weight: normal;
+        }
+
+    }
+
+    form.donacion {
+        display: flex;
+        flex-direction: column;
+        background-color: v.$gris;
+        border-radius: 1rem;
+        box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin-bottom: 2rem;
+
+        p {
+            text-align: center;
+            font-weight: bold;
+            margin: 0;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            flex-wrap: nowrap;
+
+            @include m.tablet {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .subrow {
+                display: flex;
+                justify-content: space-between;
+                .element {
+                    width: 100%;
+                    flex: 0 0 calc(50% - 1rem);
+                }
+            }
+
+            .element {
+                flex: 0 0 calc(25% - 1rem);
+            }
+
+
+            select,
+            input {
+                border: none;
+                border-radius: 1rem;
+                font-size: 2rem;
+                margin-bottom: 2rem;
+                padding: 1rem 1.5rem;
+            }
+        }
+    }
+
+    .inferior {
+        margin-bottom: 4rem;
+        h3 {
+            color: v.$rojo;
+            text-align: center;
+            margin: 0;
+        }
+    }
+}

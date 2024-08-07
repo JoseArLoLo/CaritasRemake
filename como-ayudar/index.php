@@ -86,26 +86,44 @@ incluirTemplate("header", $pagina = "como-ayudar");
     </section>
     <div id="overlay"></div>
     <div class="informacion-ayudar dona-tu-tiempo">
-        <div class="header">
-            <div class="container">
-                <h2>Voluntariado</h2>
-                <h4>Ven y vive la experiencia</h4>
-            </div>
-            <span class="close-btn">x</span>
-        </div>
-        <div class="body">
-            <div class="banner">
-                <div class="container">
-                    <h3>Dona tu tiempo</h3>
-                    <p>Realiza tu servicio social o voluntario en cualquiera de nuestras instalaciones de programas asistenciales, pregunta cómo.</p>
-                </div>
-                <picture>
-                    <source srcset="/build/img/01_Dona-tu-tiempo.avif" type="image/avif">
-                    <source srcset="/build/img/01_Dona-tu-tiempo.webp" type="image/webp">
-                    <img loading="lazy" src="/build/img/01_Dona-tu-tiempo.png" alt="Dona tu tiempo">
-                </picture>
-            </div>
-        </div>
+        <picture>
+            <source srcset="/build/img/01_PopUp_DonaTiempo.avif" type="image/avif">
+            <source srcset="/build/img/01_PopUp_DonaTiempo.webp" type="image/webp">
+            <img loading="eager" src="/build/img/01_PopUp_DonaTiempo.png" alt="Panel informativo 1">
+        </picture>
+        <a class="close-btn"></a>
+    </div>
+    <div class="informacion-ayudar dona-tus-recursos">
+        <picture>
+            <source srcset="/build/img/02_PopUp_DonaRecursos.avif" type="image/avif">
+            <source srcset="/build/img/02_PopUp_DonaRecursos.webp" type="image/webp">
+            <img loading="eager" src="/build/img/02_PopUp_DonaRecursos.png" alt="Panel informativo 2">
+        </picture>
+        <a class="close-btn"></a>
+    </div>
+    <div class="informacion-ayudar dona-en-especie">
+        <picture>
+            <source srcset="/build/img/03_PopUp_DonaEspecie.avif" type="image/avif">
+            <source srcset="/build/img/03_PopUp_DonaEspecie.webp" type="image/webp">
+            <img loading="eager" src="/build/img/03_PopUp_DonaEspecie.png" alt="Panel informativo 3">
+        </picture>
+        <a class="close-btn"></a>
+    </div>
+    <div class="informacion-ayudar apoya-como-empresa">
+        <picture>
+            <source srcset="/build/img/04_PopUp_ApoyoEmpresa.avif" type="image/avif">
+            <source srcset="/build/img/04_PopUp_ApoyoEmpresa.webp" type="image/webp">
+            <img loading="eager" src="/build/img/04_PopUp_ApoyoEmpresa.png" alt="Panel informativo 4">
+        </picture>
+        <a class="close-btn"></a>
+    </div>
+    <div class="informacion-ayudar apoya-como-profesionista">
+        <picture>
+            <source srcset="/build/img/05_PopUp_ApoyoProfesionista.avif" type="image/avif">
+            <source srcset="/build/img/05_PopUp_ApoyoProfesionista.webp" type="image/webp">
+            <img loading="eager" src="/build/img/05_PopUp_ApoyoProfesionista.png" alt="Panel informativo 5">
+        </picture>
+        <a class="close-btn"></a>
     </div>
 </main>
 <?php
