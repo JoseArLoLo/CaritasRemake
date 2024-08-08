@@ -1,4 +1,4 @@
-<?php if ($pagina !== "admin" && $pagina !== "login" && $pagina !== "crear" && $pagina !== "actualizar" && $pagina !== "donadores"): ?>
+<?php if ($pagina !== "admin" && $pagina !== "login" && $pagina !== "crear" && $pagina !== "actualizar" && $pagina !== "donadores" && $pagina !== "donar"): ?>
     <div class="footer_donar">
         <div class="content">
             <h1>Tu donativo AYUDA MÁS que 1,000 likes</h1>
@@ -79,6 +79,7 @@
 <?php echo $pagina === "que-hacemos" ? '<script src="/build/js/que-hacemos.js"></script>' : ''; ?>
 <?php echo $pagina === "actividades" ? '<script src="/build/js/actividades.js"></script>' : ''; ?>
 <?php echo $pagina === "como-ayudar" ? '<script src="/build/js/como-ayudar.js"></script>' : ''; ?>
+<?php echo $pagina === "donar" ? '<script src="/build/js/donar.js"></script>' : ''; ?>
 </body>
 
 </html>

@@ -17,9 +17,14 @@ incluirTemplate("header", $pagina = "donar");
             <p class="leyenda">¿Quién es el donante? <span>Nunca compartiremos esta información.</span></p>
         </div>
         <form action="#" method="post" class="donacion" id="card-form">
+            <input type="hidden" name="conektaTokenId" id="conektaTokenId" value="">
             <div class="row">
                 <select class="element">
-                    <option>$200 pesos</option>
+                    <option value="20">$20 pesos</option>
+                    <option value="50">$50 pesos</option>
+                    <option value="100">$100 pesos</option>
+                    <option selected value="200">$200 pesos</option>
+                    <option value="500">$500 pesos</option>
                 </select>
                 <input class="element" type="text" placeholder="Nombre">
                 <input class="element" type="text" placeholder="Apellido paterno">
@@ -40,15 +45,19 @@ incluirTemplate("header", $pagina = "donar");
             </div>
             <p>Tu donativo es deducible de impuestos.</p>
             <div class="foot-row">
-                <div class="element">
-                    <input type="checkbox">
-                    <label for="not-a-robot">I'm not a robot</label>
+                <div class="element"> <!--I'm not a robot button-->
                 </div>
                 <div class="element">
-                    <button type="submit">Donar ahora</button>
-                    <div class="row terms">
-                        <input type="checkbox">
-                        <label for="terms">He leído y acepto los <a href="#">Términos y políticas de privacidad</a></label>
+                    <button type="submit">
+                        <picture>
+                            <source srcset="/build/img/Boton_Donar_Ahora.avif" type="image/avif">
+                            <source srcset="/build/img/Boton_Donar_Ahora.webp" type="image/webp">
+                            <img loading="eager" src="/build/img/Boton_Donar_Ahora.png" alt="Boton donar ahora">
+                        </picture>
+                    </button>
+                    <div class="terms">
+                        <input type="checkbox" name="terminos" id="terminos">
+                        <label for="terminos">He leído y acepto los <a href="#">Términos y políticas de privacidad</a></label>
                     </div>
                 </div>
             </div>

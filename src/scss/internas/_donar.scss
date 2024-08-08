@@ -45,6 +45,7 @@
             font-weight: bold;
             margin: 0;
         }
+
         .row {
             display: flex;
             justify-content: space-between;
@@ -59,6 +60,7 @@
             .subrow {
                 display: flex;
                 justify-content: space-between;
+
                 .element {
                     width: 100%;
                     flex: 0 0 calc(50% - 1rem);
@@ -79,10 +81,36 @@
                 padding: 1rem 1.5rem;
             }
         }
+
+        .foot-row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+
+            .element {
+                flex: 0 0 calc(50% - 2rem);
+                text-align: center;
+
+                button {
+                    border: none;
+                    border-radius: 5rem;
+                    width: 40rem;
+                    cursor: pointer;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        .terms {
+            a {
+                color: v.$rojo;
+                text-decoration: underline;
+            }
+        }
     }
 
     .inferior {
         margin-bottom: 4rem;
+
         h3 {
             color: v.$rojo;
             text-align: center;
