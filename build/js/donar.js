@@ -1,2 +1,2 @@
-
+Conekta.setPublicKey("key_Mj1QTbILuGHuZqm70znFahZ");var conektaSuccessResponseHandler=function(e){$("#conektaTokenId").val(e.id),console.log(e.id),jsPay()},conektaErrorResponseHandler=function(e){$("#card-form");alert(e.message_to_purchaser)};function jsPay(){let e=$("#card-form").serialize();$.ajax({type:"POST",url:"pay.php",data:e,success:function(e){1==e?(alert("Tu pago se realizó con éxito"),jsClean()):alert(e)}})}function jsClean(){$(".form-control").prop("value",""),$("#conektaTokenId").prop("value","")}$(document).ready((function(){$("#card-form").submit((function(e){e.preventDefault();var a=$("#card-form");Conekta.Token.create(a,conektaSuccessResponseHandler,conektaErrorResponseHandler)}))}));
 //# sourceMappingURL=donar.js.map

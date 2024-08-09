@@ -2,7 +2,7 @@
 @use 'base/variables' as v;
 
 .donativo {
-    width: min(95%, 120rem);
+    width: min(95%, 125rem);
     margin: 2rem auto;
 
     .superior {
@@ -52,7 +52,7 @@
             flex-direction: column;
             flex-wrap: nowrap;
 
-            @include m.tablet {
+            @include m.desktop {
                 flex-direction: row;
                 flex-wrap: wrap;
             }
@@ -60,6 +60,12 @@
             .subrow {
                 display: flex;
                 justify-content: space-between;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                @include m.desktop {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
 
                 .element {
                     width: 100%;
@@ -82,9 +88,33 @@
             }
         }
 
+        .innerrow {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+
+            input.element{
+                flex: 0 0 calc(45% - .05rem) !important;
+            } 
+            span {
+                flex: 0 0 calc(10% - .05rem) !important;
+            }    
+            .bold {
+                text-align: center;
+                padding-top: 1rem;
+                padding: 1rem 0 !important;
+            }
+        }
+
         .foot-row {
             display: flex;
             justify-content: space-between;
+            flex-direction: column;
+
+            @include m.desktop {
+                flex-direction: row;
+            }
+
             margin-top: 1rem;
 
             .element {
@@ -94,12 +124,14 @@
                 button {
                     border: none;
                     border-radius: 5rem;
-                    width: 40rem;
+                    max-width: 40rem;
+                    min-width: 22rem;
                     cursor: pointer;
                     margin-bottom: 1rem;
                 }
             }
         }
+
         .terms {
             a {
                 color: v.$rojo;

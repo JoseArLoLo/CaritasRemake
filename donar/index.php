@@ -37,9 +37,13 @@ incluirTemplate("header", $pagina = "donar");
                 <select class="element">
                     <option>CDMX</option>
                 </select>
-                <input class="element" type="text" placeholder="No. de tarjeta">
+                <input class="element" type="text" data-conekta="card[number]" name="card" id="card" maxlength="16" placeholder="No. de tarjeta">
                 <div class="subrow element">
-                    <input class="element" type="text" placeholder="mm/aa">
+                    <div class="innerrow element">
+                        <input class="element" type="text" placeholder="mm">
+                        <span class="element bold">/</span>
+                        <input class="element" type="text" placeholder="aa">
+                    </div>
                     <input class="element" type="text" placeholder="CVV">
                 </div>
             </div>
@@ -61,19 +65,6 @@ incluirTemplate("header", $pagina = "donar");
                     </div>
                 </div>
             </div>
-            <!--Monto-->
-            <!--Nombre(s)-->
-            <!--Apellido paterno-->
-            <!--Apellido materno-->
-            <!--Pais-->
-            <!--Estado-->
-            <!--No. de tarjeta-->
-            <!--mm/aa-->
-            <!--CVV-->
-            <!--Leyenda de "Tu donativo es deducible de impuestos."-->
-            <!--Boton de no soy un robot-->
-            <!--Boton de donar ahora-->
-            <!--Checkbox con he leido y acepto los terminos y politicas de privacidad-->
         </form>
         <div class="inferior">
             <h3>Oraremos para que cada donación a esta causa se convierta en miles de bendiciones para ti y tu familia, Gracias</h3>
