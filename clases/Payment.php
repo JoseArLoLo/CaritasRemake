@@ -11,14 +11,14 @@ class Payment
     private $ServerDB = 'nyc.domcloud.co';
     private $DataBaseDB = 'worse_loss_jus_db';
 
-    public function __construct($token, $card, $name, $description, $total, $email)
+    public function __construct($token, $card, $name, $description, $total/*, $email*/)
     {
         $this->token = $token;
         $this->card = $card;
         $this->name = $name;
         $this->description = $description;
         $this->total = $total;
-        $this->email = $email;
+        /*$this->email = $email;*/
     }
 
     public function Pay()
@@ -43,7 +43,7 @@ class Payment
     public function Save()
     {
         $conexion = new PDO('mysql:host=' . $this->ServerDB . ';dbname=' . $this->DataBaseDB, $this->UserDB, $this->PassDB);
-
+        $email = "correo@correo.com";
         $query = "INSERT INTO payment (total, date_created, description, name, number_card, email, order_id)
 VALUES (:total, now(), :description, :name, :number_card, :email, :order_id)";
         $query = $conexion->prepare($query);
@@ -51,7 +51,7 @@ VALUES (:total, now(), :description, :name, :number_card, :email, :order_id)";
         $query->bindParam(':description', $this->description);
         $query->bindParam(':name', $this->name);
         $query->bindParam(':number_card', substr($this->card, strlen($this->card) - 5, 4));
-        $query->bindParam(':email', $this->email);
+        $query->bindParam(':email', $email);
         $query->bindParam(':order_id', $this->order->id);
         $query->execute();
     }
@@ -101,7 +101,7 @@ VALUES (:total, now(), :description, :name, :number_card, :email, :order_id)";
             $this->customer = \Conekta\Customer::create(
                 array(
                     'name' => $this->name,
-                    'email' => $this->email,
+                    'email' => 'correo@correo.com' /* $this->email */,
                     // 'phone' => '+522020202020',
                     'payment_sources' => array(
                         array(
@@ -127,18 +127,13 @@ VALUES (:total, now(), :description, :name, :number_card, :email, :order_id)";
 
     public function Validate()
     {
-        if ($this->card == '' || $this->name == '' || $this->description == '' || $this->total == '' || $this->email == '') {
+        if ($this->card == '' || $this->name == '' || $this->description == '' || $this->total == '') {
             $this->error = 'El número de tarjeta, el nombre, el monto y el correo electronico son obligatorios';
             return false;
         }
 
         if (strlen($this->card <= 15)) {
             $this->error = 'El número de tarjeta debe tener al menos 16 caracteres';
-            return false;
-        }
-
-        if (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
-            $this->error = 'El correo electronico no tiene un formato valido';
             return false;
         }
 
