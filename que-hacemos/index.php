@@ -217,7 +217,7 @@ incluirTemplate("header", $pagina = "que-hacemos");
                     </div>
                     <div class="formacion-valores_element_2">
                         <h3>¿Deseas ser parte de algún taller?</h3>
-                        <p>En Cáritas contamos con diferentes tipos y Si estas interesado(a) en inscribirte en alguno de ellos, dirígete al taller que deseas (Menú principal > Programas > Formación de valores > "Elige el taller al que deseas unirte"), revisa toda la información disponible para conocer nuestros horarios y disponibilidad, y contáctarnos por teléfono o acude a nuestras oficinas.</p>
+                        <p>En Cáritas contamos con diferentes tipos y Si estas interesado(a) en inscribirte en alguno de ellos, dirígete al taller que deseas, revisa toda la información disponible para conocer nuestros horarios y disponibilidad, y contáctarnos por teléfono o acude a nuestras oficinas.</p>
                         <p>Únete a nosotros mientras exploramos, creamos recuerdos inolvidables y cultivamos conexiones duraderas.</p>
                         <p class="bold">IMPORTANTE: La disponibilidad de cada taller puede variar dependiendo de la demanda del mismo.</p>
                     </div>
