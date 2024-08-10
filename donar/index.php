@@ -19,7 +19,7 @@ incluirTemplate("header", $pagina = "donar");
         <form action="#" method="post" class="donacion" id="card-form">
             <input type="hidden" name="conektaTokenId" id="conektaTokenId" value="">
             <div class="row">
-                <select class="element" name="total" id="total">
+                <select class="element" name="total" id="total" required>
                     <option value="20">$20 pesos</option>
                     <option value="50">$50 pesos</option>
                     <option value="100">$100 pesos</option>
@@ -27,27 +27,27 @@ incluirTemplate("header", $pagina = "donar");
                     <option value="500">$500 pesos</option>
                 </select>
                 <input type="hidden" data-conekta="card[name]" type="text" id="name" name="name">
-                <input class="element" id="nombres" type="text" placeholder="Nombre">
-                <input class="element" id="apellido_paterno" type="text" placeholder="Apellido paterno">
+                <input class="element" id="nombres" type="text" placeholder="Nombre" required>
+                <input class="element" id="apellido_paterno" type="text" placeholder="Apellido paterno" required>
                 <input class="element" id="apellido_materno" type="text" placeholder="Apellido materno">
             </div>
             <div class="row">
-                <select class="element">
+                <select class="element" required>
                     <option>México</option>
                 </select>
-                <select class="element">
+                <select class="element" required>
                     <option>CDMX</option>
                 </select>
-                <input class="element" type="text" data-conekta="card[number]" name="card" id="card" maxlength="16" placeholder="No. de tarjeta">
+                <input class="element" type="text" data-conekta="card[number]" name="card" id="card" maxlength="16" placeholder="No. de tarjeta" required>
                 <div class="subrow element">
                     <div class="innerrow element">
-                        <input class="element" data-conekta="card[exp_month]" type="text" placeholder="mm">
+                        <input class="element" data-conekta="card[exp_month]" id="exp_month" type="text" placeholder="mm" required>
                         <span class="element bold">/</span>
-                        <input class="element" data-conekta="card[exp_year]" type="text" placeholder="aa">
+                        <input class="element" data-conekta="card[exp_year]" id="exp_year" type="text" placeholder="aa" required>
                     </div>
-                    <input class="element" type="text" maxlength="4" data-conekta="card[cvc]" placeholder="CVV">
+                    <input class="element" type="text" maxlength="4" data-conekta="card[cvc]" id="cvc" placeholder="CVV" required>
                 </div>
-                <input type="text" hidden name="description" id="description" value="Donativo">
+                <input type="text" hidden name="description" id="description" value="Donativo" required>
             </div>
             <p>Tu donativo es deducible de impuestos.</p>
             <div class="foot-row">
@@ -68,6 +68,7 @@ incluirTemplate("header", $pagina = "donar");
                 </div>
             </div>
         </form>
+        <div id="overlay" class="all"></div>
         <div class="inferior">
             <h3>Oraremos para que cada donación a esta causa se convierta en miles de bendiciones para ti y tu familia, Gracias</h3>
         </div>

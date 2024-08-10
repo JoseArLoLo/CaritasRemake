@@ -1,5 +1,6 @@
 Conekta.setPublicKey("key_Mj1QTbILuGHuZqm70znFahZ"); // Llave publica de conekta
-
+const overlay = document.getElementById("overlay");
+const placeholder = 'donar/';
 var conektaSuccessResponseHandler = function (token) {
     $('#conektaTokenId').val(token.id);
     console.log(token.id);
@@ -8,12 +9,16 @@ var conektaSuccessResponseHandler = function (token) {
 }
 var conektaErrorResponseHandler = function (response) {
     var form = $('#card-form');
-    alert(response.message_to_purchaser);
+    // alert(response.message_to_purchaser);
+    alert('Hubo un error en los datos de la tarjeta');
+    overlay.classList.remove("active");
 }
 $(document).ready(function () {
     $('#card-form').submit(function (e) {
+        overlay.classList.add("active");
         if (!validarFormulario()) {
             e.preventDefault();
+            overlay.classList.remove("active");
             return;
         } else {
             e.preventDefault();
@@ -26,7 +31,7 @@ $(document).ready(function () {
 
 function jsPay() {
     let params = $('#card-form').serialize();
-    let url = 'donar/pay.php';
+    let url = placeholder + 'pay.php';
 
     $.ajax({
         type: 'POST',
@@ -34,17 +39,28 @@ function jsPay() {
         data: params,
         success: function (data) {
             if (data == 1) {
-                alert('Tu pago se realizó con éxito');
                 jsClean();
+                alert('Tu pago se realizó con éxito');
+                overlay.classList.remove("active");
+                window.location.href = placeholder + 'agradecimiento.php';
+                //Redirigir a la pantalla de agradecimiento
             } else {
                 alert(data);
+                overlay.classList.remove("active");
             }
         }
     });
 }
 
 function jsClean() {
-    $('.form-control').prop('value', '');
+    document.getElementById('name').value = '';
+    document.getElementById('nombres').value = '';
+    document.getElementById('apellido_paterno').value = '';
+    document.getElementById('apellido_materno').value = '';
+    document.getElementById('card').value = '';
+    document.getElementById('exp_month').value = '';
+    document.getElementById('exp_year').value = '';
+    document.getElementById('cvc').value = '';
     $('#conektaTokenId').prop('value', '');
 }
 function validarFormulario() {

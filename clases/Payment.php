@@ -6,10 +6,10 @@ class Payment
     private $ApiKey = "key_opE65DBFccjIyheNNVhnVBM"; // Llave privada de conekta
     private $ApiVersion = "2.0.0";
 
-    private $UserDB = 'worse-loss-jus';
-    private $PassDB = 'g1YrR-Lz9SGqd71__9';
-    private $ServerDB = 'nyc.domcloud.co';
-    private $DataBaseDB = 'worse_loss_jus_db';
+    private $UserDB = 'caritas';
+    private $PassDB = 'h3-j(W(9x97ZKYEgb9';
+    private $ServerDB = '104.236.24.119';
+    private $DataBaseDB = 'caritas_db';
 
     public function __construct($token, $card, $name, $description, $total/*, $email*/)
     {

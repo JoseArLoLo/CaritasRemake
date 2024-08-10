@@ -7,7 +7,6 @@ $db = conectarBD();
 
 $query = "SELECT * FROM payment ORDER BY id DESC";
 $donadores = mysqli_query($db, $query);
-
 incluirTemplate("header", $pagina = "donadores");
 ?>
 <main>
@@ -24,7 +23,6 @@ incluirTemplate("header", $pagina = "donadores");
                 <th>Donante</th>
                 <th>Cantidad</th>
                 <th>Fecha donacion</th>
-                <th>Correo</th>
                 <th>Clave unica</th>
             </thead>
             <tbody>
@@ -34,7 +32,6 @@ incluirTemplate("header", $pagina = "donadores");
                         <td><?php echo $donante['name']; ?></td>
                         <td><?php echo $donante['total']; ?></td>
                         <td><?php echo $donante['date_created']; ?></td>
-                        <td><?php echo $donante['email']; ?></td>
                         <td><?php echo $donante['order_id']; ?></td>
                     </tr>
                 <?php endwhile; ?>

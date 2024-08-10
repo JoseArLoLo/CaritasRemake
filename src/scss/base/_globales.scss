@@ -93,7 +93,23 @@ img {
     width: 100%;
     z-index: 1001;
 
+    &.all {
+        z-index: 3000;
+    }
     &.active {
         display: block;
+    }
+}
+#agradecimiento {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+        color: v.$rojo;
+        font-weight: bold;
+        text-align: center;
     }
 }

@@ -18,9 +18,13 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script type="text/javascript" src="https://cdn.conekta.io/js/latest/conekta.js"></script>
     <?php endif; ?>
+    <?php if ($pagina === "agradecimiento"): ?>
+        <meta http-equiv="refresh" content="7;url=/">
+    <?php endif; ?>
 </head>
 
 <body>
+    <?php if ($pagina === "agradecimiento") return; ?>
     <header class="header">
         <nav class="header_nav">
             <a href="/" class="header_nav_logo">

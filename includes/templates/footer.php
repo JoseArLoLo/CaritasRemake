@@ -1,3 +1,4 @@
+<?php if ($pagina === "agradecimiento") return;?>
 <?php if ($pagina !== "admin" && $pagina !== "login" && $pagina !== "crear" && $pagina !== "actualizar" && $pagina !== "donadores" && $pagina !== "donar"): ?>
     <div class="footer_donar">
         <div class="content">
