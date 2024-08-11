@@ -35,7 +35,7 @@ function debuguear($variable)
     echo "</pre>";
     exit;
 }
-function fecha($fecha)
+function fecha($fecha, $year = true)
 {
     // Extraer componentes de la fecha
     $componentes_fecha = explode("-", $fecha);
@@ -63,6 +63,26 @@ function fecha($fecha)
     $mes_nombre = $meses_espanol[$mes];
 
     // Formatear la fecha
-    $fecha_formateada = $dia . " - " . $mes_nombre . " - " . $anio;
+    $fecha_formateada = $dia . " de " . $mes_nombre;
+    if ($year === true) {
+        $fecha_formateada .= " de " . $anio;
+    }
     return $fecha_formateada;
+}
+function indexar($contenido, $parrafos = 2)
+{
+    $pattern = '/(<p[^>]*>.*?<\/p>)/s';
+    preg_match_all($pattern, $contenido, $matches);
+    if (count($matches[0]) > $parrafos) {
+        $first_three = implode('', array_slice($matches[0], 0, $parrafos));
+        $remaining = implode('', array_slice($matches[0], $parrafos));
+        $remaining_wrapped = '<div class="extra-content">' . $remaining . '</div>
+                    <span class="toggle-link show-more-link">Leer más</span>
+                    <span class="toggle-link show-less-link" style="display: none;">Leer menos</span>';
+        $new_content = $first_three . $remaining_wrapped;
+    } else {
+        $new_content = $contenido;
+    }
+
+    return $new_content;
 }

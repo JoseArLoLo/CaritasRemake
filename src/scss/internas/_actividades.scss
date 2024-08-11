@@ -32,6 +32,11 @@ $actividad_separacion: 2rem;
             p {
                 color: v.$negro;
             }
+            .toggle-link, a {
+                color: v.$rojo !important;
+                cursor: pointer;
+                text-decoration: underline;
+            }
         }
         &:not(:last-of-type) {
             border-bottom: .1rem solid v.$gris;
@@ -40,9 +45,4 @@ $actividad_separacion: 2rem;
 }
 .extra-content {
     display: none;
-}
-.toggle-link {
-    color: v.$rojo !important;
-    cursor: pointer;
-    text-decoration: underline;
 }

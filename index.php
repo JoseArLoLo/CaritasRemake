@@ -1,6 +1,9 @@
 <?php
 require 'includes/app.php';
 $bannerPath = "uploads/banner/banner.png";
+$db = conectarBD();
+$query = "SELECT id,imagen,titulo,fecha FROM actividades ORDER BY id DESC LIMIT 12";
+$actividades = mysqli_query($db, $query);
 incluirTemplate("header", $pagina = "principal");
 ?>
 <main>
@@ -105,94 +108,17 @@ incluirTemplate("header", $pagina = "principal");
             <button class="carousel__button carousel__button--left" onclick="moveLeft()"><span>&#8249;</span></button>
             <div class="carousel__container">
                 <div class="carousel__track">
-                    <div class="carousel__slide">
-                        <picture>
-                            <source srcset="/build/img/navidad.avif" type="image/avif">
-                            <source srcset="/build/img/navidad.webp" type="image/webp">
-                            <img loading="lazy" src="/build/img/navidad.png" alt="Navidad 2024">
-                        </picture>
-                        <div class="carousel__caption">
-                            <h3>Navidad 2024</h3>
-                            <p>25 de diciembre</p>
-                        </div>
-                    </div>
-                    <div class="carousel__slide">
-                        <picture>
-                            <source srcset="/build/img/reyes.avif" type="image/avif">
-                            <source srcset="/build/img/reyes.webp" type="image/webp">
-                            <img loading="lazy" src="/build/img/reyes.png" alt="Día de Reyes 2024">
-                        </picture>
-                        <div class="carousel__caption">
-                            <h3>Día de Reyes 2024</h3>
-                            <p>06 de enero</p>
-                        </div>
-                    </div>
-                    <div class="carousel__slide">
-                        <picture>
-                            <source srcset="/build/img/misa.avif" type="image/avif">
-                            <source srcset="/build/img/misa.webp" type="image/webp">
-                            <img loading="lazy" src="/build/img/misa.png" alt="Misa 12 Diciembre">
-                        </picture>
-                        <div class="carousel__caption">
-                            <h3>Misa 12 Diciembre</h3>
-                            <p>12 de diciembre</p>
-                        </div>
-                    </div>
-                    <div class="carousel__slide">
-                        <picture>
-                            <source srcset="/build/img/posada.avif" type="image/avif">
-                            <source srcset="/build/img/posada.webp" type="image/webp">
-                            <img loading="lazy" src="/build/img/posada.png" alt="Posada Cáritas">
-                        </picture>
-                        <div class="carousel__caption">
-                            <h3>Posada Cáritas</h3>
-                            <p>15 de diciembre</p>
-                        </div>
-                    </div>
-                    <div class="carousel__slide">
-                        <picture>
-                            <source srcset="/build/img/testing.avif" type="image/avif">
-                            <source srcset="/build/img/testing.webp" type="image/webp">
-                            <img loading="lazy" src="/build/img/testing.png" alt="Navidad 2024">
-                        </picture>
-                        <div class="carousel__caption">
-                            <h3>Navidad 2024</h3>
-                            <p>25 de diciembre</p>
-                        </div>
-                    </div>
-                    <div class="carousel__slide">
-                        <picture>
-                            <source srcset="/build/img/reyes.avif" type="image/avif">
-                            <source srcset="/build/img/reyes.webp" type="image/webp">
-                            <img loading="lazy" src="/build/img/reyes.png" alt="Día de Reyes 2024">
-                        </picture>
-                        <div class="carousel__caption">
-                            <h3>Día de Reyes 2024</h3>
-                            <p>06 de enero</p>
-                        </div>
-                    </div>
-                    <div class="carousel__slide">
-                        <picture>
-                            <source srcset="/build/img/misa.avif" type="image/avif">
-                            <source srcset="/build/img/misa.webp" type="image/webp">
-                            <img loading="lazy" src="/build/img/misa.png" alt="Misa 12 Diciembre">
-                        </picture>
-                        <div class="carousel__caption">
-                            <h3>Misa 12 Diciembre</h3>
-                            <p>12 de diciembre</p>
-                        </div>
-                    </div>
-                    <div class="carousel__slide">
-                        <picture>
-                            <source srcset="/build/img/posada.avif" type="image/avif">
-                            <source srcset="/build/img/posada.webp" type="image/webp">
-                            <img loading="lazy" src="/build/img/posada.png" alt="Posada Cáritas">
-                        </picture>
-                        <div class="carousel__caption">
-                            <h3>Posada Cáritas</h3>
-                            <p>15 de diciembre</p>
-                        </div>
-                    </div>
+                    <?php while ($actividad = mysqli_fetch_assoc($actividades)) : ?>
+                        <a href="/actividades#<?php echo $actividad['id']; ?>" class="carousel__slide">
+                            <picture>
+                                <img loading="lazy" src="/uploads/actividades/<?php echo $actividad['imagen']; ?>" alt="Posada Cáritas">
+                            </picture>
+                            <div class="carousel__caption">
+                                <h3><?php echo $actividad['titulo']; ?></h3>
+                                <p><?php echo fecha($actividad['fecha'], $year = false); ?></p>
+                            </div>
+                        </a>
+                    <?php endwhile; ?>
                 </div>
             </div>
             <button class="carousel__button carousel__button--right" onclick="moveRight()"><span>&#8250;</span></button>
