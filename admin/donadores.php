@@ -23,6 +23,7 @@ incluirTemplate("header", $pagina = "donadores");
                 <th>Donante</th>
                 <th>Cantidad</th>
                 <th>Fecha donacion</th>
+                <th>Facturación</th>
                 <th>Clave unica</th>
             </thead>
             <tbody>
@@ -32,6 +33,9 @@ incluirTemplate("header", $pagina = "donadores");
                         <td><?php echo $donante['name']; ?></td>
                         <td><?php echo $donante['total']; ?></td>
                         <td><?php echo $donante['date_created']; ?></td>
+                        <td><?php 
+                            if ($donante['email'] === 'null@correo.com' || $donante['email'] === 'correo@correo.com') { echo "No solicitada";  }else { echo $donante['email']; }
+                        ?></td>
                         <td><?php echo $donante['order_id']; ?></td>
                     </tr>
                 <?php endwhile; ?>

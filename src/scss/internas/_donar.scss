@@ -62,6 +62,7 @@
                 justify-content: space-between;
                 flex-direction: column;
                 flex-wrap: nowrap;
+
                 @include m.desktop {
                     flex-direction: row;
                     flex-wrap: wrap;
@@ -75,6 +76,19 @@
 
             .element {
                 flex: 0 0 calc(25% - 1rem);
+                position: relative;
+                select {
+                    width: 100%;
+                }
+                .inner_input {
+                    display: none;
+                    position: absolute;
+                    left: 0%;
+                    width: 90%;
+                    &.active {
+                        display: unset;
+                    }
+                }
             }
 
 
@@ -93,12 +107,14 @@
             justify-content: space-between;
             flex-direction: row;
 
-            input.element{
+            input.element {
                 flex: 0 0 calc(45% - .05rem) !important;
-            } 
+            }
+
             span {
                 flex: 0 0 calc(10% - .05rem) !important;
-            }    
+            }
+
             .bold {
                 text-align: center;
                 padding-top: 1rem;

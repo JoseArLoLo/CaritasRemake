@@ -11,14 +11,17 @@ class Payment
     private $ServerDB = '104.236.24.119';
     private $DataBaseDB = 'caritas_db';
 
-    public function __construct($token, $card, $name, $description, $total/*, $email*/)
+    public function __construct($token, $card, $name, $description, $total, $email)
     {
         $this->token = $token;
         $this->card = $card;
         $this->name = $name;
         $this->description = $description;
         $this->total = $total;
-        /*$this->email = $email;*/
+        if (is_null($email) || empty($email)) {
+            $email = 'null@correo.com';
+        }
+        $this->email = $email;
     }
 
     public function Pay()
@@ -43,7 +46,6 @@ class Payment
     public function Save()
     {
         $conexion = new PDO('mysql:host=' . $this->ServerDB . ';dbname=' . $this->DataBaseDB, $this->UserDB, $this->PassDB);
-        $email = "correo@correo.com";
         $query = "INSERT INTO payment (total, date_created, description, name, number_card, email, order_id)
 VALUES (:total, now(), :description, :name, :number_card, :email, :order_id)";
         $query = $conexion->prepare($query);
@@ -51,7 +53,7 @@ VALUES (:total, now(), :description, :name, :number_card, :email, :order_id)";
         $query->bindParam(':description', $this->description);
         $query->bindParam(':name', $this->name);
         $query->bindParam(':number_card', substr($this->card, strlen($this->card) - 5, 4));
-        $query->bindParam(':email', $email);
+        $query->bindParam(':email', $this->email);
         $query->bindParam(':order_id', $this->order->id);
         $query->execute();
     }
@@ -101,7 +103,7 @@ VALUES (:total, now(), :description, :name, :number_card, :email, :order_id)";
             $this->customer = \Conekta\Customer::create(
                 array(
                     'name' => $this->name,
-                    'email' => 'correo@correo.com' /* $this->email */,
+                    'email' => $this->email,
                     // 'phone' => '+522020202020',
                     'payment_sources' => array(
                         array(
