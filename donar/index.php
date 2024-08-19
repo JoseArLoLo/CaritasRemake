@@ -53,7 +53,7 @@ incluirTemplate("header", $pagina = "donar");
                     <option>CDMX</option>
                 </select> -->
                 <input type="text" hidden name="description" id="description" value="Donativo" required>
-                <input type="number" hidden name="total" id="total" min="0" max="1000000">
+                <input type="number" hidden name="total" id="total" min="0" max="1000000" value="200">
             </div>
             <p>Tu donativo es deducible de impuestos.</p>
             <div class="foot-row">
