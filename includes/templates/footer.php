@@ -1,4 +1,11 @@
-<?php if ($pagina === "agradecimiento") return;?>
+<a id="whatsapp" href="https://wa.me/526673793261" target="_blank">
+    <picture>
+        <source srcset="/build/img/whatsapp.avif" type="image/avif">
+        <source srcset="/build/img/whatsapp.webp" type="image/webp">
+        <img loading="lazy" src="/build/img/whatsapp.png" alt="Icono whatsapp">
+    </picture>
+</a>
+<?php if ($pagina === "agradecimiento") return; ?>
 <?php if ($pagina !== "admin" && $pagina !== "login" && $pagina !== "crear" && $pagina !== "actualizar" && $pagina !== "donadores" && $pagina !== "donar"): ?>
     <div class="footer_donar">
         <div class="content">
@@ -12,7 +19,7 @@
             </a>
         </div>
     </div>
-<?php endif;?>
+<?php endif; ?>
 <footer>
     <div class="contenedor footer_container">
         <div class="footer_item">
