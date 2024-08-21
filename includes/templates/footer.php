@@ -1,4 +1,4 @@
-<a id="whatsapp" href="https://wa.me/526673793261" target="_blank">
+<a id="whatsapp" href="https://wa.me/526674283035" target="_blank">
     <picture>
         <source srcset="/build/img/whatsapp.avif" type="image/avif">
         <source srcset="/build/img/whatsapp.webp" type="image/webp">
