@@ -1,6 +1,6 @@
 Conekta.setPublicKey("key_Mj1QTbILuGHuZqm70znFahZ"); // Llave publica de conekta
 const overlay = document.getElementById("overlay");
-const placeholder = 'donar/';
+const placeholder = '';
 var invoiceCheck = document.getElementById('factura');
 var mail = document.getElementById('email');
 var otherAmount = document.getElementById('otherAmount');

@@ -133,6 +133,11 @@ img {
         font-weight: bold;
         text-align: center;
     }
+    img {
+        pointer-events: none;
+        width: 100vh;
+        height: auto;
+    }
 }
 
 #whatsapp {
